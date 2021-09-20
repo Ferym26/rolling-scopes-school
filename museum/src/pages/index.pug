@@ -1,0 +1,29 @@
+extends ../layout/layout
+
+
+block vars
+	- var pageTitle = 'Заголовок'
+	- var pageDescr = 'Описание'
+	- var bodyClass = ''
+	- var componentsList = []
+
+
+block main
+	.container
+		p Main page empty
+
+
+block popups
+
+
+block componentsStyles
+	include ../components/a-styles/a-styles
+	+style-includer()
+
+
+block libs
+	script(src="./js/vendors/tiny-slider.js" defer)
+
+
+block scripts
+	script(src="./js/index.js" defer)

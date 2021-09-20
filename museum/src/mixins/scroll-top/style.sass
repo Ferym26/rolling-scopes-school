@@ -1,0 +1,47 @@
+.scroll-top
+	position: fixed
+	display: none
+	bottom: 60px
+	right: 40px
+	+sizeblock(60px)
+	+circle
+	background: linear-gradient(90deg,$c-main 0%,#ffd600 100%), $c-main
+	box-shadow: 0 2px 6px #eee
+	cursor: pointer
+	transition: transform 0.3s ease
+	transform: translate(0, 140px)
+	z-index: 777
+
+	+media($lg)
+		bottom: 20px
+		right: 20px
+		+sizeblock(42px)
+
+	&:hover
+		transform: translate(0, 0) scale(1.1) !important
+
+	.icon
+		position: absolute
+		width: 20px
+		height: 20px
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%) rotate(90deg)
+		fill: #fff
+
+		+media($lg)
+			width: 12px
+			height: 15px
+
+	&.active
+		transform: translate(0, 0px)
+
+	&.nofix
+		position: absolute
+		top: -120px
+
+
+	body.modal-open &
+
+		+mediaMin($lg)
+			right: 57px

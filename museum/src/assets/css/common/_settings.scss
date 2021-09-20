@@ -1,0 +1,31 @@
+:root {
+	--var: 1px;
+}
+
+// Grid breakpoints
+$lg: 1250px;
+$md: 768px;
+
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+	xs: 0,
+	md: $md,
+	lg: $lg,
+);
+
+$container-max-widths: (
+	md: 768px,
+	lg: 1230px,
+);
+
+// Fonts types
+$c-size: 16px;
+$font-main: 'FuturaPT', sans-serif;
+
+// Colors
+$c-main:		#ffec00;
+$c-sec:			red;
+$c-bg:			#ccc;
+$c-text:		#01030F;
+$trp:			transparent;
