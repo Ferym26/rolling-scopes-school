@@ -3,30 +3,33 @@
 }
 
 // Grid breakpoints
-$lg: 1250px;
-$md: 768px;
+$xl: 1600px;
+$lg: 984px;
+$md: 728px;
 
-$grid-gutter-width: 30px;
+$grid-gutter-width: 40px;
 
 $grid-breakpoints: (
 	xs: 0,
 	md: $md,
 	lg: $lg,
+	xl: $xl,
 );
 
 $container-max-widths: (
 	md: 768px,
-	lg: 1230px,
+	lg: 1200px,
+	xl: 1440px,
 );
 
 // Fonts types
-$c-size: 16px;
-$font-main: 'Roboto', sans-serif;
-$font-sec: 'Forum', sans-serif;
+$font-main: 		'Roboto', sans-serif;
+$font-sec: 			'Forum', sans-serif;
 
 // Colors
-$c-main:		#ffec00;
-$c-sec:			red;
-$c-bg:			#ccc;
-$c-text:		#01030F;
-$trp:			transparent;
+$c-main:			#9D8665;
+$bg-dark:			#030303;
+$red-dark:			#710707;
+$c-text:			#000;
+$c-bg:				#ccc;
+$trp:				transparent;
