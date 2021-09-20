@@ -1,7 +1,7 @@
 {
-	"name": "priorlandtemplate",
+	"name": "museum",
 	"version": "1.0.0",
-	"description": "Lands for Prior Bank",
+	"description": "museum",
 	"main": "gulpfile.js",
 	"scripts": {
 		"dev": "npm-run-all --parallel devAll devjs",
@@ -12,14 +12,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://gitlab.com/animatis-dev/prior/priorlandtemplate"
+		"url": "https://github.com/Ferym26/rolling-scopes-school"
 	},
 	"author": "ferym26@gmail.com",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://gitlab.com/animatis-dev/prior/priorlandtemplate/issues"
+		"url": "https://github.com/Ferym26/rolling-scopes-school/issues"
 	},
-	"homepage": "https://gitlab.com/animatis-dev/prior/priorlandtemplate#README",
+	"homepage": "https://github.com/Ferym26/rolling-scopes-school#README",
 	"devDependencies": {
 		"@babel/cli": "^7.5.5",
 		"@babel/core": "^7.5.5",
