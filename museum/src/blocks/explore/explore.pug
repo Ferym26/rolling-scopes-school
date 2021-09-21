@@ -1,6 +1,21 @@
-+b('section').section.explore.bg-black#explore
++b('section').explore.section.bg-black#explore
 	.container
-		+section-title({
-			mode: 'is-border',
-			text: 'Picture explore',
-		})
+
+		+e.__inner
+
+			+e.__content
+
+				+section-title({
+					mode: 'is-border',
+					text: 'Picture explore',
+				})
+
+				+e('article').__article
+					p.text Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.
+					p.text It was cleaned in 1984 to remove a #[span.accent "yellow veil"] of dust that had gathered since the previous restoration in the 19th century.
+					p.text The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.
+
+			+e.__slider
+				+lazy-webp({
+					pic: 'es-before.jpg',
+				})
