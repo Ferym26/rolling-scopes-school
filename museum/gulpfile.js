@@ -73,3 +73,29 @@ gulp.task('default', gulp.series(
 
 	'sync',
 ));
+
+
+gulp.task('build', gulp.series(
+
+	'sass-crit',
+	'pug',
+
+	gulp.parallel(
+		'sass-styles',
+		'sass-component',
+	),
+
+	gulp.parallel(
+		'svg',
+		'imagemin',
+		'fonts',
+		'scripts-libs',
+		// 'scripts',
+		// 'scripts-components',
+		// 'watch',
+		'favicon',
+		'video',
+	),
+
+	// 'sync',
+));
