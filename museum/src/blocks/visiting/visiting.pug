@@ -1,3 +1,68 @@
-+b('section').visiting#visiting
+-
+	var cardlist = [
+		{
+			link: 'tour-1.html',
+			pic: 'tour-1.jpg',
+			title: 'Royal Palace',
+			descr: [
+				'360° Virtual Tour',
+				'Google Street Panorama View',
+			],
+		},
+		{
+			link: 'tour-2.html',
+			pic: 'tour-2.jpg',
+			title: 'Denon Wing',
+			descr: [
+				'360° Virtual Tour',
+				'Google Street Panorama View',
+			],
+		},
+		{
+			link: 'tour-3.html',
+			pic: 'tour-3.jpg',
+			title: 'Colonnade Perrault',
+			descr: [
+				'360° Virtual Tour',
+				'Google Street Panorama View',
+			],
+		},
+		{
+			link: 'tour-4.html',
+			pic: 'tour-4.jpg',
+			title: 'Greek hall',
+			descr: [
+				'360° Virtual Tour',
+				'Google Street Panorama View',
+			],
+		},
+		{
+			link: 'tour-5.html',
+			pic: 'tour-5.jpg',
+			title: 'Mona Lisa',
+			descr: [
+				'360° Virtual Tour',
+				'Google Street Panorama View',
+			],
+		},
+		{
+			link: 'tour-6.html',
+			pic: 'tour-6.jpg',
+			title: 'Night Palace',
+			descr: [
+				'360° Virtual Tour',
+				'Google Street Panorama View',
+			],
+		},
+	]
+
++b('section').visiting.section#visiting
 	.container
-		p visiting
+		+section-title({
+			mode: 'is-border',
+			text: 'Virtual tour',
+		})
+
+		+e.__list
+			each item in cardlist
+				+card-tour(item)

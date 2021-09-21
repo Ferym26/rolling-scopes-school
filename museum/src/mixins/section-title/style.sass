@@ -1,19 +1,23 @@
 .section-title
-	margin-bottom: 50px
-	text-align: center
-
-	+media($lg)
-		margin-bottom: 30px
+	$this: &
+	position: relative
+	margin-bottom: 75px
 
 	&__text
-		font-size: 36px
-
-		+media($lg)
-			font-size: 24px
+		font-size: 80px
+		text-transform: uppercase
+		line-height: 1
+		letter-spacing: 5px
+		color: $c-main
+		font-weight: 400
 
 	&__descr
-		margin-top: 6px
-		font-size: 22px
 
-		+media($lg)
-			font-size: 16px
+	&.is-border
+		padding-bottom: 34px
+		border-bottom: 3px solid $red-dark
+
+	.bg-black &
+
+		#{$this}__text
+			color: #fff

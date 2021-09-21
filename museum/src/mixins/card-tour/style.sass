@@ -1,0 +1,48 @@
+.card-tour
+	position: relative
+	width: 100%
+
+	&__pic
+
+	&__content
+		margin-top: 25px
+
+	&__title
+		position: relative
+		margin-bottom: 9px
+		padding-bottom: 11px
+
+		&::after
+			+pseudo
+			+sizeblock(300px, 2px)
+			bottom: 0
+			left: 0
+			background-color: $red-dark
+
+		.title-link
+			color: #000
+			font-size: 32px
+			line-height: 1
+			letter-spacing: 5px
+			text-transform: uppercase
+			font-weight: 400
+			text-decoration: none
+
+			&::before
+				+pseudo
+				+sizeblock(100%)
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+
+	&__descr
+
+		.text
+			font-weight: 200
+
+			&--fz1
+				margin-bottom: 6px
+
+			&--fz2
+				font-size: 18px
