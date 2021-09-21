@@ -13,7 +13,6 @@
 *.vi
 *~
 *.zip
-*.lock
 
 # OS or Editor folders
 *.sublime-grunt.cache
