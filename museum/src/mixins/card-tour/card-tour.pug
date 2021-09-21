@@ -2,7 +2,10 @@ mixin card-tour(data)
 
 	+b.card-tour
 		+e.__pic
-			+lazy-webp({pic: data.pic})
+			+lazy-webp({
+				pic: data.pic,
+				mod: 'card-img',
+			})
 		+e.__content
 			+e('h3').__title
 				a.title-link(href= data.link target='_blank')= data.title

@@ -1,23 +1,24 @@
 .card-tour
+	$this: &
 	position: relative
 	width: 100%
+	z-index: 10
+
+	&:hover
+
+		.card-img
+			transform: scale(1.05)
 
 	&__pic
+		overflow: hidden
+
+		.card-img
+			transition: transform 0.3s ease-in-out
 
 	&__content
 		margin-top: 25px
 
 	&__title
-		position: relative
-		margin-bottom: 9px
-		padding-bottom: 11px
-
-		&::after
-			+pseudo
-			+sizeblock(300px, 2px)
-			bottom: 0
-			left: 0
-			background-color: $red-dark
 
 		.title-link
 			color: #000
@@ -35,8 +36,19 @@
 				right: 0
 				bottom: 0
 				left: 0
+				z-index: 20
 
 	&__descr
+		position: relative
+		margin-top: 9px
+		padding-top: 11px
+
+		&::before
+			+pseudo
+			+sizeblock(300px, 2px)
+			top: 0
+			left: 0
+			background-color: $red-dark
 
 		.text
 			font-weight: 200
