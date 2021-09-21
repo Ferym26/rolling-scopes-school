@@ -2,15 +2,21 @@ extends ../layout/layout
 
 
 block vars
-	- var pageTitle = 'Заголовок'
-	- var pageDescr = 'Описание'
+	- var pageTitle = 'Louvre'
+	- var pageDescr = 'Louvre'
 	- var bodyClass = ''
 	- var componentsList = []
 
 
 block main
-	.container
-		p Main page empty
+	include ../blocks/welcome/welcome
+	include ../blocks/visiting/visiting
+	include ../blocks/explore/explore
+	include ../blocks/video/video
+	include ../blocks/gallery/gallery
+	include ../blocks/tickets/tickets
+	include ../blocks/banner/banner
+	include ../blocks/contacts/contacts
 
 
 block popups

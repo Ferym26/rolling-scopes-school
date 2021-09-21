@@ -1,32 +1,4 @@
--
-	var menuList = [
-		{
-			name: 'Visiting',
-			link: '#visiting',
-		},
-		{
-			name: 'Explore',
-			link: '#explore',
-		},
-		{
-			name: 'Video',
-			link: '#video',
-		},
-		{
-			name: 'Gallery',
-			link: '#gallery',
-		},
-		{
-			name: 'Tickets',
-			link: '#tickets',
-		},
-		{
-			name: 'Contacts',
-			link: '#contacts',
-		},
-	]
-
-+b('header').header
++b('header').header.bg-black
 
 	.container
 
@@ -35,7 +7,4 @@
 			.logo
 				img.logo-img(src="images/logo.svg", alt="logo")
 
-			+b.main-menu
-				+e('nav').__list
-					each item in menuList
-						+e('a').__link(href=item.link)= item.name
+			include ../main-menu/main-menu

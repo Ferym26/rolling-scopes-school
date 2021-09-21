@@ -1,1 +1,50 @@
 .footer
+
+	&__top
+		position: relative
+		display: flex
+		align-items: flex-start
+		padding: 30px 0
+
+		&:before
+			+pseudo
+			+sizeblock(100vw, 3px)
+			+wcenter
+			bottom: 0
+			background-color: #666
+
+	&__bot
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 30px 0
+
+	&__link
+
+	.logo
+		flex: 0 0 199px
+		max-width: 199px
+
+	.copyright
+		color: #fff
+		font-weight: 200
+
+	.social
+		align-self: flex-end
+		margin-left: auto
+
+	.main-menu
+		margin-left: 145px
+
+		&__list
+			display: block
+			width: 400px
+			columns: 2
+			margin-bottom: -30px
+
+		&__link
+			width: 200px
+			margin-bottom: 30px
+
+			&:not(:last-child)
+				margin-right: 0

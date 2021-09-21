@@ -1,0 +1,18 @@
+.social
+	display: flex
+	align-items: center
+
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		+sizeblock(48px)
+		+circle
+		border: 1px solid #666
+
+		&:not(:last-child)
+			margin-right: 25px
+
+		.icon
+			+sizeblock(24px)
+			fill: #fff

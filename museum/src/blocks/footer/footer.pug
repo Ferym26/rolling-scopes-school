@@ -1,2 +1,11 @@
-+b('footer').footer footer
-
++b('footer').footer.bg-black
+	.container
+		+e.__top
+			.logo
+				img.logo-img(src="images/logo.svg", alt="logo")
+			include ../main-menu/main-menu
+			include ../social/social
+		+e.__bot
+			.copyright ©2021
+			+e('a').__link.link(href='https://rs.school/js/' target='_blank') The Rolling Scopes School
+			+e('a').__link.link(href='https://github.com/Ferym26' target='_blank') Ferym26

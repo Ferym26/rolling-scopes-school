@@ -7,6 +7,7 @@ import utils from './utils/index';
 import ready from './utils/_ready';
 // Components
 // Blocks
+import Welcome from '../../blocks/welcome/script'
 // Mixins
 
 ready(() => {
@@ -14,6 +15,7 @@ ready(() => {
 	// Components
 
 	// Blocks
+	Welcome();
 
 	// Mixins
 
