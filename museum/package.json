@@ -6,7 +6,6 @@
 	"scripts": {
 		"dev": "npm-run-all --parallel devAll devjs",
 		"devAll": "gulp",
-		"build": "gulp build",
 		"deploy": "gulp deploy",
 		"devjs": "webpack --config ./webpack.config.js"
 	},
