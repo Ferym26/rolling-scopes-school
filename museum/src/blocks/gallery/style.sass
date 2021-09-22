@@ -1,1 +1,27 @@
 .gallery
+
+	&__body
+		position: relative
+		height: 1960px
+		overflow: hidden
+		z-index: 10
+
+		&:after
+			+pseudo
+			+sizeblock(100%, 360px)
+			right: 0
+			bottom: 0
+			left: 0
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+			z-index: 20
+
+	&__inner
+		columns: 3
+		column-gap: 36px
+		margin-bottom: -24px
+
+	&.section
+		padding-bottom: 0
+
+	.gallery-img
+		margin-bottom: 24px

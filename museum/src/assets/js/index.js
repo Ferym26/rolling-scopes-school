@@ -8,6 +8,7 @@ import ready from './utils/_ready';
 // Components
 // Blocks
 import Welcome from '../../blocks/welcome/script'
+import Gallery from '../../blocks/gallery/script'
 // Mixins
 
 ready(() => {
@@ -16,6 +17,7 @@ ready(() => {
 
 	// Blocks
 	Welcome();
+	Gallery();
 
 	// Mixins
 
