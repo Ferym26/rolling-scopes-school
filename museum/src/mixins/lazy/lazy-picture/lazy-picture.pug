@@ -2,7 +2,7 @@
 //- 	pic: 'default-image.jpg',
 //- })
 
-mixin lazy-picture(data)
+mixin picture(data)
 
 	- var name = data.pic.split('.')[0]
 	- var ext = data.pic.split('.')[1]
@@ -13,3 +13,31 @@ mixin lazy-picture(data)
 		source(media=`(max-width: 767px)` srcset=`images/${name}@2.${ext} 2x, images/${name}_mob.${ext} 1x`)
 		source(media=`(min-width: 768px)` srcset=`images/${name}@2.${ext} 2x, images/${data.pic} 1x`)
 		img(src=`images/${data.pic}` alt='pic')
+
+
+
+mixin lazy-picture(data)
+
+	- var name = data.pic.split('.')[0]
+	- var ext = data.pic.split('.')[1]
+
+	picture
+		source(media=`(max-width: 767px)` srcset=pixel data-srcset=`images/${name}_mob.webp` type='image/webp')
+		source(media=`(min-width: 768px)` srcset=pixel data-srcset=`images/${name}.webp` type='image/webp')
+		source(media=`(max-width: 767px)` srcset=pixel data-srcset=`images/${name}_mob.${ext}`)
+		source(media=`(min-width: 768px)` srcset=pixel data-srcset=`images/${data.pic}`)
+		img.lazy-img(data-src=`images/${data.pic}` src=pixel alt='pic')
+
+
+
+mixin lazy-picture2x(data)
+
+	- var name = data.pic.split('.')[0]
+	- var ext = data.pic.split('.')[1]
+
+	picture
+		source(media=`(max-width: 767px)` srcset=pixel data-srcset=`images/${name}_mob@2.webp 2x, images/${name}_mob.webp 1x` type='image/webp')
+		source(media=`(min-width: 768px)` srcset=pixel data-srcset=`images/${name}@2.webp 2x, images/${name}.webp 1x` type='image/webp')
+		source(media=`(max-width: 767px)` srcset=pixel data-srcset=`images/${name}@2.${ext} 2x, images/${name}_mob.${ext} 1x`)
+		source(media=`(min-width: 768px)` srcset=pixel data-srcset=`images/${name}@2.${ext} 2x, images/${data.pic} 1x`)
+		img.lazy-img(data-src=`images/${data.pic}` src=pixel alt='pic')
