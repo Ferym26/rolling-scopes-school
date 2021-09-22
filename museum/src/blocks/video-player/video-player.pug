@@ -1,0 +1,7 @@
+mixin video-player(data)
+
+	+b.video-player
+		+e.__media
+			img.tns-lazy-img(data-src=`images/${data.poster}` src=pixel alt="slide 1")
+		+e.__nav
+			p nav

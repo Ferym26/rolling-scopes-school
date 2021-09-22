@@ -1,3 +1,56 @@
+-
+	var pics = [
+		{
+			poster: 'poster0.jpg',
+			thumbnail: 'poster0-thumb.jpg',
+		},
+		{
+			poster: 'poster1.jpg',
+			thumbnail: 'poster1-thumb.jpg',
+		},
+		{
+			poster: 'poster2.jpg',
+			thumbnail: 'poster2-thumb.jpg',
+		},
+		{
+			poster: 'poster3.jpg',
+			thumbnail: 'poster3-thumb.jpg',
+		},
+		{
+			poster: 'poster4.jpg',
+			thumbnail: 'poster4-thumb.jpg',
+		},
+	]
+
+include ../video-player/video-player
+
 +b('section').section.video#video
 	.container
-		p video
+		+section-title({
+			text: 'Video journey',
+			descr: "Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code",
+		})
+
+		+b.slider-video-main
+			+e.__wrap.js_slider-video-main
+				each item in pics
+					+e.__slide
+						+video-player(item)
+
+		+b.slider-video-nav
+			+e.__wrap.js_slider-video-nav
+				each item in pics
+					+e.__slide
+						img.tns-lazy-img(data-src=`images/${item.thumbnail}` src=pixel alt="slide 1")
+
+			+e.__nav
+				+e('button').__btn.--prev(aria-label='Prev')
+					+icon('slider-video-arrow')
+				+e.__nav-dots
+					button.dot(aria-label='dot')
+					button.dot(aria-label='dot')
+					button.dot(aria-label='dot')
+					button.dot(aria-label='dot')
+					button.dot(aria-label='dot')
+				+e('button').__btn.--next(aria-label='Next')
+					+icon('slider-video-arrow')

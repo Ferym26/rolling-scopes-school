@@ -9,6 +9,7 @@ import ready from './utils/_ready';
 // Blocks
 import Welcome from '../../blocks/welcome/script'
 import Gallery from '../../blocks/gallery/script'
+import Video from '../../blocks/video/script'
 // Mixins
 
 ready(() => {
@@ -18,6 +19,7 @@ ready(() => {
 	// Blocks
 	Welcome();
 	Gallery();
+	Video();
 
 	// Mixins
 
