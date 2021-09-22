@@ -7,8 +7,10 @@
 		"dev": "npm-run-all --parallel devAll devjs",
 		"devAll": "gulp",
 		"deploy": "gulp deploy",
+		"buildStatick": "gulp build",
 		"devjs": "webpack --config ./webpack.config.js",
-		"prod": "gulp build"
+		"buildjs": "webpack --config ./webpack.prod.config.js",
+		"prod": "npm-run-all --parallel buildStatick buildjs"
 	},
 	"repository": {
 		"type": "git",
