@@ -1,3 +1,16 @@
-+b('section').section.contacts#contacts
++b('section').contacts.section#contacts
 	.container
-		p contacts
+		+section-title({
+			mode: 'is-border',
+			text: 'Contacts',
+		})
+
+		+e.__inner
+			+e.__content
+				+e.__name Palais Royal Musee du Louvre
+				+e('ul').__list
+					+e('li').__text address: 75001 Paris, France
+					+e('li').__text phone: +33(0) 1 40 20 50 50
+					+e('li').__text mail: info@louvre.fr
+			+e.__map
+				+lazy-img({pic: 'map.jpg'})

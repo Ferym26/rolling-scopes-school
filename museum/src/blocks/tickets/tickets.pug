@@ -1,3 +1,12 @@
-+b('section').section.tickets#tickets
++b('section').tickets.section#tickets
 	.container
-		p tickets
+		+section-title({
+			mode: 'is-border',
+			text: 'Buy tickets',
+		})
+
+		+e.__inner
+			+e.__col
+				+lazy-img({pic: 'ticket-pic-1.jpg'})
+			+e.__col
+				p 123
