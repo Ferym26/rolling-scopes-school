@@ -7,6 +7,7 @@ import Welcome from '../../blocks/welcome/script'
 import Gallery from '../../blocks/gallery/script'
 import Video from '../../blocks/video/script'
 import videoPlayer from '../../blocks/video-player/script'
+import Booking from '../../blocks/booking/script'
 // Mixins
 
 ready(() => {
@@ -18,6 +19,7 @@ ready(() => {
 	Gallery();
 	Video();
 	videoPlayer.init();
+	Booking.init();
 
 	// Mixins
 
