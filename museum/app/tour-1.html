@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Louvre">
+		<title>Louvre</title>
+		<!-- Подключение общих критический стилей-->
+		<style>*,::after,::before{box-sizing:border-box}ol[class],ul[class]{padding:0}blockquote,body,dd,dl,figcaption,figure,h1,h2,h3,h4,li,ol[class],p,ul[class]{margin:0}body{scroll-behavior:smooth;text-rendering:optimizeSpeed;position:relative;display:block;min-height:100vh;width:100%;min-width:320px;height:100%;font-family:Roboto,sans-serif;font-size:22px;color:#000;line-height:1.4;font-weight:300;-webkit-overflow-scrolling:touch}ol[class],ul[class]{list-style:none}a:not([class]){-webkit-text-decoration-skip:ink;text-decoration-skip-ink:auto}img{max-width:100%;display:block}article>*+*{margin-top:1em}button,input,select,textarea{font:inherit}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:local("Roboto"),url(fonts/Roboto/Roboto-Light.woff2) format("woff2"),url(fonts/Roboto/Roboto-Light.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:200;src:local("Roboto"),url(fonts/Roboto/Roboto-Thin.woff2) format("woff2"),url(fonts/Roboto/Roboto-Thin.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:local("Roboto"),url(fonts/Roboto/Roboto-Medium.woff2) format("woff2"),url(fonts/Roboto/Roboto-Medium.woff) format("woff")}@font-face{font-display:swap;font-family:Forum;font-style:normal;font-weight:400;src:local("Forum"),url(fonts/Forum/Forum.woff2) format("woff2"),url(fonts/Forum/Forum.woff) format("woff")}.container{width:100%;max-width:1480px;margin:0 auto;padding-left:20px;padding-right:20px}html{height:100%;scroll-behavior:smooth}.wrapper{display:flex;flex-direction:column;min-height:100vh;overflow:hidden}.main{flex:1 0 auto}@media (prefers-reduced-motion:reduce){*{-webkit-animation-duration:0s!important;animation-duration:0s!important;-webkit-animation-iteration-count:1!important;animation-iteration-count:1!important;transition-duration:0s!important;scroll-behavior:auto!important}}</style>
+		<!-- Подключение стилей с помощью loadCSS техники-->
+		<link rel="preload" as="style" href="./css/styles.min.css" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript>
+			<link rel="stylesheet" href="./css/styles.min.css">
+		</noscript>
+		<!-- Скрипт обработки loadCSS техники-->
+		<script>
+			!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+			
+		</script>
+		<!-- Мета инфо-->
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+		<link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
+		<link rel="manifest" href="./images/favicon/site.webmanifest">
+		<link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#3b3b3b">
+		<meta name="msapplication-navbutton-color" content="#525ECA">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#525ECA">
+		<meta name="msapplication-TileColor" content="#525ECA">
+		<meta name="theme-color" content="#525ECA">
+		<!-- OG\-->
+		<meta property="og:title" content="OG Заголовок">
+		<meta property="og:description" content="OG Описание">
+		<meta property="fb:app_id" content="">
+		<meta property="og:type" content="website">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="og:url" content="https://animatis.dev/static/priorLandTemplate/">
+		<meta property="og:image" content="https://animatis.dev/static/priorLandTemplate/images/og-image.jpg">
+		<meta property="twitter:image" content="https://animatis.dev/static/priorLandTemplate/images/og-image.jpg">
+	</head>
+	<body class="no-js">
+		<script>
+			document.querySelector('body').classList.remove('no-js');
+			
+		</script>
+		<div class="wrapper">
+			<main class="main">
+				<iframe class="tour-frame" src="https://www.google.com/maps/embed?pb=!4v1632235598203!6m8!1m7!1sCAoSLEFGMVFpcE1aOVlnbkFyYndFSWJUREFOZVNRWUZ1OWdOcXBXXzJTdjhGQnZZ!2m2!1d48.8606881835717!2d2.335679134426641!3f328.36!4f-2.450000000000003!5f0.4000000000000002" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</main>
+		</div>
+		<!-- Полключение стилей компонентов-->
+		<link rel="stylesheet" href="./css/tour-frame/style.css"/>
+		<link rel="stylesheet" href="./css/a-styles/style.css"/>
+	</body>
+</html>

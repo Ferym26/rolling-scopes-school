@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Louvre">
+		<title>Louvre</title>
+		<!-- Подключение общих критический стилей-->
+		<style>*,::after,::before{box-sizing:border-box}ol[class],ul[class]{padding:0}blockquote,body,dd,dl,figcaption,figure,h1,h2,h3,h4,li,ol[class],p,ul[class]{margin:0}body{scroll-behavior:smooth;text-rendering:optimizeSpeed;position:relative;display:block;min-height:100vh;width:100%;min-width:320px;height:100%;font-family:Roboto,sans-serif;font-size:22px;color:#000;line-height:1.4;font-weight:300;-webkit-overflow-scrolling:touch}ol[class],ul[class]{list-style:none}a:not([class]){-webkit-text-decoration-skip:ink;text-decoration-skip-ink:auto}img{max-width:100%;display:block}article>*+*{margin-top:1em}button,input,select,textarea{font:inherit}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:300;src:local("Roboto"),url(fonts/Roboto/Roboto-Light.woff2) format("woff2"),url(fonts/Roboto/Roboto-Light.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:200;src:local("Roboto"),url(fonts/Roboto/Roboto-Thin.woff2) format("woff2"),url(fonts/Roboto/Roboto-Thin.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:500;src:local("Roboto"),url(fonts/Roboto/Roboto-Medium.woff2) format("woff2"),url(fonts/Roboto/Roboto-Medium.woff) format("woff")}@font-face{font-display:swap;font-family:Roboto;font-style:normal;font-weight:400;src:local("Roboto"),url(fonts/Roboto/Roboto-Regular.woff2) format("woff2"),url(fonts/Roboto/Roboto-Regular.woff) format("woff")}@font-face{font-display:swap;font-family:Forum;font-style:normal;font-weight:400;src:local("Forum"),url(fonts/Forum/Forum.woff2) format("woff2"),url(fonts/Forum/Forum.woff) format("woff")}.container{width:100%;max-width:1480px;margin:0 auto;padding-left:20px;padding-right:20px}html{height:100%;scroll-behavior:smooth}.wrapper{display:flex;flex-direction:column;min-height:100vh;overflow:hidden}.main{flex:1 0 auto}.booking,.booking__layout{top:0;right:0;bottom:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1000}.booking{display:flex;align-items:center;visibility:hidden;position:fixed}.booking.is-open{pointer-events:initial}.booking.is-open .booking__layout{opacity:1;pointer-events:initial}.booking.is-open .booking__inner{-webkit-transform:translate(0,0);transform:translate(0,0)}.booking__layout{position:absolute;background-color:rgba(0,0,0,.65);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);opacity:0;transition:opacity .3s ease-in-out;will-change:opacity}.booking__inner{position:relative;width:100%;max-width:1440px;height:100%;max-height:845px;margin:0 auto;background-color:#fff;-webkit-transform:translate(-101vw,0);transform:translate(-101vw,0);transition:transform .5s ease-in-out;transition:transform .5s ease-in-out,-webkit-transform .5s ease-in-out;z-index:1020}.booking__content{display:flex;justify-content:space-between;width:100%;max-width:970px;margin:0 auto;padding:90px 0}.booking__meta{flex:0 0 400px;max-width:400px}.booking__overview{flex:0 0 530px;max-width:530px;border:1px solid #000;padding:25px 30px}.booking__head{margin-top:35px;margin-bottom:60px;padding-bottom:6px;border-bottom:3px solid #710707}.booking__head-title{position:relative;margin-bottom:5px;font-size:50px;text-transform:uppercase;color:#9d8665;font-family:Forum,sans-serif}.booking__head-title .b-logo{position:absolute;left:0;bottom:calc(100% - 7px)}.booking__head-descr{font-weight:700;font-size:18px;color:#710707}.booking__counter{margin-top:20px;padding:6px 15px 15px;border:1px solid #000}.booking__counter-title{margin-bottom:15px;padding-bottom:3px;font-size:18px;font-family:Forum,sans-serif;border-bottom:2px solid #710707}.booking__counter-row{display:flex;justify-content:space-between}.booking__counter-row:not(:last-child){margin-bottom:16px}.booking__counter-text{font-size:18px}.booking__info{position:relative;margin-bottom:20px}.booking__info-title{margin-bottom:11px;font-weight:500;font-size:32px;color:#272727;line-height:1}.booking__info-subtitle{margin-bottom:10px;font-weight:500;color:#710707;line-height:1}.booking__info-preview{position:absolute;top:0;right:0;width:150px;height:120px}.booking__info-preview img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.booking__info-item{display:flex;align-items:center}.booking__info-item-icon{flex:0 0 15px;max-width:15px;height:15px;margin-right:15px}.booking__info-item-icon .icon{display:block;width:100%;height:100%;fill:#000}.booking__info-item-text{font-weight:300;font-size:18px}.booking__total-list{margin-bottom:7px;padding-bottom:7px;border-bottom:2px solid #710707}.booking__total-row{display:flex;justify-content:space-between}.booking__total-row:not(:last-child){margin-bottom:1px}.booking__total-type{display:flex;align-items:center}.booking__total-type-title{font-weight:400}.booking__total-label{width:32px;margin-right:11px;padding:1px 3px;background-color:#000;color:#a4a4a3;text-align:center;font-size:18px;line-height:1;border-radius:3px}.booking__total-price{font-weight:400}.booking__total-footer{display:flex;justify-content:space-between}.booking__total-title{font-weight:400;font-size:32px}.booking__total-summ{font-size:32px;font-weight:500}.booking__cardholder{position:relative;margin-top:6px;padding-bottom:30px}.booking__cardholder .b-card{width:360px;height:211px}.booking__cardholder .b-card--front{position:relative;z-index:20}.booking__cardholder .b-card--back{position:absolute;top:30px;left:110px;z-index:10}.booking__action{display:flex;justify-content:flex-end;margin-top:26px}.booking__action .btn-main{width:220px;height:45px;line-height:45px;background-color:#710707;border-radius:0}.booking .b-close{position:absolute;top:30px;right:30px;padding:0;border:0;background-color:transparent;width:26px;height:26px;fill:#000;cursor:pointer}.booking .b-close:hover .icon{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.booking .b-close .icon{display:block;width:100%;height:100%;transition:transform .3s ease-in-out;transition:transform .3s ease-in-out,-webkit-transform .3s ease-in-out}.header{padding:59px 0}.header__inner{display:flex;align-items:center;justify-content:space-between}.header .logo .logo-img{width:199px;height:33px}.main-menu__list{display:flex}.main-menu__link{display:inline-block}.main-menu__link:not(:last-child){margin-right:56px}.welcome{padding:0 0 60px}.welcome__inner{position:relative;display:flex}.welcome__content{position:absolute;display:flex;flex-direction:column;top:0;bottom:0;left:0;max-width:600px;width:100%;height:100%;padding-top:150px;z-index:20}.welcome__title{margin-bottom:25px;font-weight:400;text-transform:uppercase;font-size:80px;letter-spacing:5px;line-height:1.1;color:#fff}.welcome__descr{font-size:28px;font-weight:300;letter-spacing:2px;color:#fff}.welcome__action{margin-top:70px}.slider-welcome{position:relative;width:1000px;height:750px;margin-left:auto;z-index:10}.slider-welcome::before{content:'';position:absolute;display:block;width:100%;height:100%;top:0;bottom:0;left:0;background:linear-gradient(90deg,#000 0,rgba(0,0,0,.5) 16.19%,transparent 30.73%);pointer-events:none;z-index:15}.slider-welcome__nav{position:absolute;display:flex;align-items:center;right:0;bottom:-60px;padding:40px 72px;background-color:#000}.slider-welcome__nav-counter{margin-right:55px;color:#fff}.slider-welcome__nav-counter .devider{display:inline-block;margin:0 5px}.slider-welcome__nav-dots{margin-right:55px}.slider-welcome__nav-dots .dot{width:16px;height:16px;padding:0;background-color:#fff;border:0;border-radius:0;cursor:pointer;transition:background-color .3s ease}.slider-welcome__nav-dots .dot:not(:last-child){margin-right:20px}.slider-welcome__nav-dots .dot.tns-nav-active{background-color:#d2b183}.slider-welcome__nav-dots .dot:hover{background-color:#9d8665}.slider-welcome__nav-controls{display:flex}.slider-welcome__btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;border:0;background-color:transparent;cursor:pointer}.slider-welcome__btn:hover .icon{fill:#9d8665}.slider-welcome__btn .icon{width:30px;height:8px;fill:#fff;transition:fill .3s ease}.slider-welcome__btn--prev{margin-right:10px}.slider-welcome__btn--prev .icon{-webkit-transform:scale(-1,1);transform:scale(-1,1)}@media (prefers-reduced-motion:reduce){*{-webkit-animation-duration:0s!important;animation-duration:0s!important;-webkit-animation-iteration-count:1!important;animation-iteration-count:1!important;transition-duration:0s!important;scroll-behavior:auto!important}}</style>
+		<!-- Предзагрузка ключевых ресурсов-->
+		<link rel="preload" as="image" href="./images/logo.svg">
+		<link rel="preload" as="font" href="./fonts/Roboto/Roboto-Light.woff2" type="font/woff2" crossorigin>
+		<link rel="preload" as="font" href="./fonts/Roboto/Roboto-Light.woff" type="font/woff" crossorigin>
+		<link rel="preload" as="font" href="./fonts/Forum/Forum.woff2" type="font/woff2" crossorigin>
+		<link rel="preload" as="font" href="./fonts/Forum/Forum.woff" type="font/woff" crossorigin>
+		<!-- Подключение стилей с помощью loadCSS техники-->
+		<link rel="preload" as="style" href="./css/styles.min.css" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript>
+			<link rel="stylesheet" href="./css/styles.min.css">
+		</noscript>
+		<!-- Скрипт обработки loadCSS техники-->
+		<script>
+			!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+			
+		</script>
+		<!-- Мета инфо-->
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+		<link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
+		<link rel="manifest" href="./images/favicon/site.webmanifest">
+		<link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#3b3b3b">
+		<meta name="msapplication-navbutton-color" content="#525ECA">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#525ECA">
+		<meta name="msapplication-TileColor" content="#525ECA">
+		<meta name="theme-color" content="#525ECA">
+		<!-- OG\-->
+		<meta property="og:title" content="OG Заголовок">
+		<meta property="og:description" content="OG Описание">
+		<meta property="fb:app_id" content="">
+		<meta property="og:type" content="website">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="og:url" content="https://animatis.dev/static/priorLandTemplate/">
+		<meta property="og:image" content="https://animatis.dev/static/priorLandTemplate/images/og-image.jpg">
+		<meta property="twitter:image" content="https://animatis.dev/static/priorLandTemplate/images/og-image.jpg">
+	</head>
+	<body class="no-js">
+		<script>
+			document.querySelector('body').classList.remove('no-js');
+			
+		</script>
+		<div class="wrapper">
+			<header class="header bg-black">
+				<div class="container">
+					<div class="header__inner">
+						<div class="logo"><img class="logo-img" src="images/logo.svg" alt="logo"></div>
+						<div class="main-menu">
+							<nav class="main-menu__list"><a class="main-menu__link link" href="#visiting">Visiting</a><a class="main-menu__link link" href="#explore">Explore</a><a class="main-menu__link link" href="#video">Video</a><a class="main-menu__link link" href="#gallery">Gallery</a><a class="main-menu__link link" href="#tickets">Tickets</a><a class="main-menu__link link" href="#contacts">Contacts</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section class="welcome bg-black" id="welcome">
+					<div class="container">
+						<div class="welcome__inner">
+							<div class="welcome__content">
+								<h1 class="welcome__title">Welcome <br> to the Louvre
+								</h1>
+								<div class="welcome__descr">From the castle to the museum
+								</div>
+								<div class="welcome__action"><a class="btn-main" href="tour-welcome.html" target="_blank">Discover the Louvre</a>
+								</div>
+							</div>
+							<div class="slider-welcome">
+								<div class="slider-welcome__wrap js_slider-welcome">
+									<div class="slider-welcome__slide"><img class="tns-lazy-img" data-src="images/ws-1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+									</div>
+									<div class="slider-welcome__slide"><img class="tns-lazy-img" data-src="images/ws-2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 2">
+									</div>
+									<div class="slider-welcome__slide"><img class="tns-lazy-img" data-src="images/ws-3.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 3">
+									</div>
+									<div class="slider-welcome__slide"><img class="tns-lazy-img" data-src="images/ws-4.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 4">
+									</div>
+									<div class="slider-welcome__slide"><img class="tns-lazy-img" data-src="images/ws-5.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 5">
+									</div>
+								</div>
+								<div class="slider-welcome__nav">
+									<div class="slider-welcome__nav-counter"><span class="js_slide-index">01</span> <span class="devider">|</span> <span class="js_slide-all"></span>
+									</div>
+									<div class="slider-welcome__nav-dots">
+										<button class="dot" aria-label="dot"></button>
+										<button class="dot" aria-label="dot"></button>
+										<button class="dot" aria-label="dot"></button>
+										<button class="dot" aria-label="dot"></button>
+										<button class="dot" aria-label="dot"></button>
+									</div>
+									<div class="slider-welcome__nav-controls">
+										<button class="slider-welcome__btn slider-welcome__btn--prev" aria-label="Prev">
+											<svg class="icon">
+												<use xlink:href="./images/sprite.svg#slider-welcome-arrow"></use>
+											</svg>
+										</button>
+										<button class="slider-welcome__btn slider-welcome__btn--next" aria-label="Next">
+											<svg class="icon">
+												<use xlink:href="./images/sprite.svg#slider-welcome-arrow"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="visiting section" id="visiting">
+					<div class="container">
+						<div class="section-title is-border">
+							<h2 class="section-title__text">Virtual tour
+							</h2>
+						</div>
+						<div class="visiting__list">
+							<div class="card-tour">
+								<div class="card-tour__pic">
+									<picture>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-1.webp" type="image/webp"/>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-1.jpg" type="image/jpeg"/><img class="lazy-img card-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/tour-1.jpg" alt="pic"/>
+									</picture>
+								</div>
+								<div class="card-tour__content">
+									<h3 class="card-tour__title"><a class="title-link" href="tour-1.html" target="_blank">Royal Palace</a>
+									</h3>
+									<div class="card-tour__descr">
+										<p class="text text--fz1">360° Virtual Tour</p>
+										<p class="text text--fz2">Google Street Panorama View</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-tour">
+								<div class="card-tour__pic">
+									<picture>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-2.webp" type="image/webp"/>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-2.jpg" type="image/jpeg"/><img class="lazy-img card-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/tour-2.jpg" alt="pic"/>
+									</picture>
+								</div>
+								<div class="card-tour__content">
+									<h3 class="card-tour__title"><a class="title-link" href="tour-2.html" target="_blank">Denon Wing</a>
+									</h3>
+									<div class="card-tour__descr">
+										<p class="text text--fz1">360° Virtual Tour</p>
+										<p class="text text--fz2">Google Street Panorama View</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-tour">
+								<div class="card-tour__pic">
+									<picture>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-3.webp" type="image/webp"/>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-3.jpg" type="image/jpeg"/><img class="lazy-img card-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/tour-3.jpg" alt="pic"/>
+									</picture>
+								</div>
+								<div class="card-tour__content">
+									<h3 class="card-tour__title"><a class="title-link" href="tour-3.html" target="_blank">Colonnade Perrault</a>
+									</h3>
+									<div class="card-tour__descr">
+										<p class="text text--fz1">360° Virtual Tour</p>
+										<p class="text text--fz2">Google Street Panorama View</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-tour">
+								<div class="card-tour__pic">
+									<picture>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-4.webp" type="image/webp"/>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-4.jpg" type="image/jpeg"/><img class="lazy-img card-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/tour-4.jpg" alt="pic"/>
+									</picture>
+								</div>
+								<div class="card-tour__content">
+									<h3 class="card-tour__title"><a class="title-link" href="tour-4.html" target="_blank">Greek hall</a>
+									</h3>
+									<div class="card-tour__descr">
+										<p class="text text--fz1">360° Virtual Tour</p>
+										<p class="text text--fz2">Google Street Panorama View</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-tour">
+								<div class="card-tour__pic">
+									<picture>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-5.webp" type="image/webp"/>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-5.jpg" type="image/jpeg"/><img class="lazy-img card-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/tour-5.jpg" alt="pic"/>
+									</picture>
+								</div>
+								<div class="card-tour__content">
+									<h3 class="card-tour__title"><a class="title-link" href="tour-5.html" target="_blank">Mona Lisa</a>
+									</h3>
+									<div class="card-tour__descr">
+										<p class="text text--fz1">360° Virtual Tour</p>
+										<p class="text text--fz2">Google Street Panorama View</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-tour">
+								<div class="card-tour__pic">
+									<picture>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-6.webp" type="image/webp"/>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/tour-6.jpg" type="image/jpeg"/><img class="lazy-img card-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/tour-6.jpg" alt="pic"/>
+									</picture>
+								</div>
+								<div class="card-tour__content">
+									<h3 class="card-tour__title"><a class="title-link" href="tour-6.html" target="_blank">Night Palace</a>
+									</h3>
+									<div class="card-tour__descr">
+										<p class="text text--fz1">360° Virtual Tour</p>
+										<p class="text text--fz2">Google Street Panorama View</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="explore section bg-black" id="explore">
+					<div class="container">
+						<div class="explore__inner">
+							<div class="explore__content">
+								<div class="section-title is-border">
+									<h2 class="section-title__text">Picture explore
+									</h2>
+								</div>
+								<article class="explore__article">
+									<p class="text">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+									<p class="text">It was cleaned in 1984 to remove a <span class="accent">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+									<p class="text">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+								</article>
+							</div>
+							<div class="explore__slider">
+								<picture>
+									<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/es-before.webp" type="image/webp"/>
+									<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/es-before.jpg" type="image/jpeg"/><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/es-before.jpg" alt="pic"/>
+								</picture>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section video" id="video">
+					<div class="container">
+						<div class="section-title">
+							<h2 class="section-title__text">Video journey
+							</h2>
+							<h4 class="section-title__descr">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
+							</h4>
+						</div>
+						<div class="slider-video-main">
+							<div class="slider-video-main__wrap js_slider-video-main">
+								<div class="slider-video-main__slide">
+													<div class="video-player">
+														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+															<button class="vp-btn" aria-label="Play Button">
+																<svg class="icon">
+																	<use xlink:href="./images/sprite.svg#play-big"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="video-player__nav">
+															<div class="video-player__play">
+																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#play"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#pause"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-time">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__volume-btn">
+																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#volume-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#volume-off"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-volume">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__fullpage">
+																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#full-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#full-off"></use>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+								</div>
+								<div class="slider-video-main__slide">
+													<div class="video-player">
+														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+															<button class="vp-btn" aria-label="Play Button">
+																<svg class="icon">
+																	<use xlink:href="./images/sprite.svg#play-big"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="video-player__nav">
+															<div class="video-player__play">
+																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#play"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#pause"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-time">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__volume-btn">
+																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#volume-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#volume-off"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-volume">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__fullpage">
+																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#full-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#full-off"></use>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+								</div>
+								<div class="slider-video-main__slide">
+													<div class="video-player">
+														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+															<button class="vp-btn" aria-label="Play Button">
+																<svg class="icon">
+																	<use xlink:href="./images/sprite.svg#play-big"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="video-player__nav">
+															<div class="video-player__play">
+																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#play"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#pause"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-time">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__volume-btn">
+																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#volume-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#volume-off"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-volume">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__fullpage">
+																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#full-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#full-off"></use>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+								</div>
+								<div class="slider-video-main__slide">
+													<div class="video-player">
+														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster3.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+															<button class="vp-btn" aria-label="Play Button">
+																<svg class="icon">
+																	<use xlink:href="./images/sprite.svg#play-big"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="video-player__nav">
+															<div class="video-player__play">
+																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#play"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#pause"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-time">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__volume-btn">
+																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#volume-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#volume-off"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-volume">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__fullpage">
+																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#full-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#full-off"></use>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+								</div>
+								<div class="slider-video-main__slide">
+													<div class="video-player">
+														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster4.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+															<button class="vp-btn" aria-label="Play Button">
+																<svg class="icon">
+																	<use xlink:href="./images/sprite.svg#play-big"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="video-player__nav">
+															<div class="video-player__play">
+																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#play"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#pause"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-time">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__volume-btn">
+																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#volume-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#volume-off"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="video-player__progress-volume">
+																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
+															</div>
+															<div class="video-player__fullpage">
+																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
+																	<svg class="icon icon-on">
+																		<use xlink:href="./images/sprite.svg#full-on"></use>
+																	</svg>
+																	<svg class="icon icon-off">
+																		<use xlink:href="./images/sprite.svg#full-off"></use>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider-video-nav">
+							<div class="slider-video-nav__wrap js_slider-video-nav">
+								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster0-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+								</div>
+								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster1-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+								</div>
+								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster2-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+								</div>
+								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster3-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+								</div>
+								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster4-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
+								</div>
+							</div>
+							<div class="slider-video-nav__nav">
+								<button class="slider-video-nav__btn slider-video-nav__btn--prev" aria-label="Prev">
+									<svg class="icon">
+										<use xlink:href="./images/sprite.svg#slider-video-arrow"></use>
+									</svg>
+								</button>
+								<div class="slider-video-nav__nav-dots">
+									<button class="dot" aria-label="dot"></button>
+									<button class="dot" aria-label="dot"></button>
+								</div>
+								<button class="slider-video-nav__btn slider-video-nav__btn--next" aria-label="Next">
+									<svg class="icon">
+										<use xlink:href="./images/sprite.svg#slider-video-arrow"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="gallery section bg-black" id="gallery">
+					<div class="container">
+						<div class="section-title">
+							<h2 class="section-title__text">Art Gallery
+							</h2>
+						</div>
+						<div class="gallery__body">
+							<div class="gallery__inner">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="tickets section" id="tickets">
+					<div class="container">
+						<div class="section-title is-border">
+							<h2 class="section-title__text">Buy tickets
+							</h2>
+						</div>
+						<div class="tickets__inner">
+							<div class="tickets__pic"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/ticket-pic-1.jpg" alt="image"/>
+							</div>
+							<div class="tickets__calc">
+								<div class="tickets__box tickets__box--ticket">
+									<div class="tickets__box-title">Ticket Type
+									</div>
+									<div class="tickets__box-content">
+										<div class="radio">
+											<input type="radio" id="id1" name="name" value="active" checked="checked"/>
+											<label for="id1">Permanent exhibition</label>
+										</div>
+										<div class="radio">
+											<input type="radio" id="id2" name="name" value="active"/>
+											<label for="id2">Temporary exhibition</label>
+										</div>
+										<div class="radio">
+											<input type="radio" id="id3" name="name" value="active"/>
+											<label for="id3">Combined Admission</label>
+										</div>
+									</div>
+								</div>
+								<div class="tickets__box tickets__box--amount">
+									<div class="tickets__box-title">Amount
+									</div>
+									<div class="conte-list">
+										<div class="conte-elem">
+											<div class="conte-elem__title">Basic 18+
+											</div>
+											<div class="pc-counter">
+												<input class="pc-counter-input js_pc-counter-input" type="text" value="1" data-min-value="1" data-max-value="100" data-suffix="" name="NAME9718351090" aria-label="Enter quantity" readonly="readonly"/>
+												<button class="pc-counter-btn pc-counter-minus js_pc-counter-minus" type="button">-</button>
+												<button class="pc-counter-btn pc-counter-plus js_pc-counter-plus" type="button">+</button>
+											</div>
+										</div>
+										<div class="conte-elem">
+											<div class="conte-elem__title">Senior 65+
+											</div>
+											<div class="pc-counter">
+												<input class="pc-counter-input js_pc-counter-input" type="text" value="1" data-min-value="1" data-max-value="100" data-suffix="" name="NAME1508983405" aria-label="Enter quantity" readonly="readonly"/>
+												<button class="pc-counter-btn pc-counter-minus js_pc-counter-minus" type="button">-</button>
+												<button class="pc-counter-btn pc-counter-plus js_pc-counter-plus" type="button">+</button>
+											</div>
+										</div>
+									</div>
+									<div class="tickets__result">
+										<div class="tickets__result-text">Total €<span class="js_result-num">220</span>
+										</div>
+									</div>
+									<div class="tickets__action">
+										<button class="btn-black js_open-booking">Buy Now</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="banner lazy-img" style="background-image: url(&quot;data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==&quot;)" data-bg="url('images/parallax.jpg')" role="img" aria-label="banner" title="banner">
+				</section>
+				<section class="contacts section" id="contacts">
+					<div class="container">
+						<div class="section-title is-border">
+							<h2 class="section-title__text">Contacts
+							</h2>
+						</div>
+						<div class="contacts__inner">
+							<div class="contacts__content">
+								<div class="contacts__name">Palais Royal Musee du Louvre
+								</div>
+								<ul class="contacts__list">
+									<li class="contacts__text">address: 75001 Paris, France
+									</li>
+									<li class="contacts__text">phone: +33(0) 1 40 20 50 50
+									</li>
+									<li class="contacts__text">mail: info@louvre.fr
+									</li>
+								</ul>
+							</div>
+							<div class="contacts__map"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/map.jpg" alt="image"/>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="booking">
+					<div class="booking__layout">
+					</div>
+					<div class="booking__inner">
+						<div class="booking__content">
+							<button class="b-close" aria-label="Close">
+								<svg class="icon">
+									<use xlink:href="./images/sprite.svg#close"></use>
+								</svg>
+							</button>
+							<div class="booking__meta">
+								<div class="booking__head">
+									<div class="booking__head-title">Booking tickets<img class="lazy-img b-logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/booking-logo.svg" alt="image"/>
+									</div>
+									<div class="booking__head-descr">Tour to Louvre
+									</div>
+								</div>
+								<div class="booking__form">
+									<div class="form-row col2">
+										<div class="b-select">
+											<select class="b-select__field" name="date">
+												<option value="q">1</option>
+												<option value="q">1</option>
+												<option value="q">1</option>
+											</select>
+											<svg class="icon icon-type">
+												<use xlink:href="./images/sprite.svg#date"></use>
+											</svg>
+											<svg class="icon icon-arrow">
+												<use xlink:href="./images/sprite.svg#select-arrow"></use>
+											</svg>
+										</div>
+										<div class="b-select">
+											<select class="b-select__field" name="time">
+												<option value="q">1</option>
+												<option value="q">1</option>
+												<option value="q">1</option>
+											</select>
+											<svg class="icon icon-type">
+												<use xlink:href="./images/sprite.svg#time"></use>
+											</svg>
+											<svg class="icon icon-arrow">
+												<use xlink:href="./images/sprite.svg#select-arrow"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="b-input">
+											<input class="b-input__field" type="text" placeholder="Name">
+											<svg class="icon icon-type">
+												<use xlink:href="./images/sprite.svg#person"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="b-input">
+											<input class="b-input__field" type="mail" placeholder="E-mail">
+											<svg class="icon icon-type">
+												<use xlink:href="./images/sprite.svg#email"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="b-input">
+											<input class="b-input__field" type="tel" placeholder="Phone">
+											<svg class="icon icon-type">
+												<use xlink:href="./images/sprite.svg#tel"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="b-select">
+											<select class="b-select__field" name="date" placeholder="Ticket Type">
+												<option value="q">1</option>
+												<option value="q">1</option>
+												<option value="q">1</option>
+											</select>
+											<svg class="icon icon-type">
+												<use xlink:href="./images/sprite.svg#date"></use>
+											</svg>
+											<svg class="icon icon-arrow">
+												<use xlink:href="./images/sprite.svg#select-arrow"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="booking__counter">
+									<div class="booking__counter-title">Entry ticket
+									</div>
+									<div class="booking__counter-list">
+										<div class="booking__counter-row">
+											<div class="booking__counter-text">Basic 18+ (20 €)
+											</div>
+											<div class="pc-counter pc-counter--theme2">
+												<input class="pc-counter-input js_pc-counter-input" type="text" value="1" data-min-value="1" data-max-value="100" data-suffix="" name="NAME7260417228" aria-label="Enter quantity" readonly="readonly"/>
+												<button class="pc-counter-btn pc-counter-minus js_pc-counter-minus" type="button">-</button>
+												<button class="pc-counter-btn pc-counter-plus js_pc-counter-plus" type="button">+</button>
+											</div>
+										</div>
+										<div class="booking__counter-row">
+											<div class="booking__counter-text">Senior 65+ (10 €)
+											</div>
+											<div class="pc-counter pc-counter--theme2">
+												<input class="pc-counter-input js_pc-counter-input" type="text" value="1" data-min-value="1" data-max-value="100" data-suffix="" name="NAME3810315126" aria-label="Enter quantity" readonly="readonly"/>
+												<button class="pc-counter-btn pc-counter-minus js_pc-counter-minus" type="button">-</button>
+												<button class="pc-counter-btn pc-counter-plus js_pc-counter-plus" type="button">+</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="booking__overview">
+								<div class="booking__info">
+									<div class="booking__info-title">Overview
+									</div>
+									<div class="booking__info-subtitle">Tour to Louvre
+									</div>
+									<div class="booking__info-preview"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/b-preview.jpg" alt="image"/>
+									</div>
+									<div class="booking__info-list">
+										<div class="booking__info-item">
+											<div class="booking__info-item-icon">
+												<svg class="icon">
+													<use xlink:href="./images/sprite.svg#date"></use>
+												</svg>
+											</div>
+											<div class="booking__info-item-text">Friday, August 19
+											</div>
+										</div>
+										<div class="booking__info-item">
+											<div class="booking__info-item-icon">
+												<svg class="icon">
+													<use xlink:href="./images/sprite.svg#time"></use>
+												</svg>
+											</div>
+											<div class="booking__info-item-text">16 : 30
+											</div>
+										</div>
+										<div class="booking__info-item">
+											<div class="booking__info-item-icon">
+												<svg class="icon">
+													<use xlink:href="./images/sprite.svg#check"></use>
+												</svg>
+											</div>
+											<div class="booking__info-item-text">Temporary exhibition
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="booking__total">
+									<div class="booking__total-list">
+										<div class="booking__total-row">
+											<div class="booking__total-type">
+												<div class="booking__total-label">2
+												</div>
+												<div class="booking__total-type-title">Basic (20 €)
+												</div>
+											</div>
+											<div class="booking__total-price">40 €
+											</div>
+										</div>
+										<div class="booking__total-row">
+											<div class="booking__total-type">
+												<div class="booking__total-label">2
+												</div>
+												<div class="booking__total-type-title">Senior (10 €)
+												</div>
+											</div>
+											<div class="booking__total-price">20 €
+											</div>
+										</div>
+									</div>
+									<div class="booking__total-footer">
+										<div class="booking__total-title">Total:
+										</div>
+										<div class="booking__total-summ">60 €
+										</div>
+									</div>
+								</div>
+								<div class="booking__cardholder">
+									<div class="b-card b-card--front"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/card-front.svg" alt="image"/>
+									</div>
+									<div class="b-card b-card--back"><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/card-back.svg" alt="image"/>
+									</div>
+								</div>
+								<div class="booking__action">
+									<button class="btn-main">Book</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer bg-black">
+				<div class="container">
+					<div class="footer__top">
+						<div class="logo"><img class="logo-img" src="images/logo.svg" alt="logo"></div>
+						<div class="main-menu">
+							<nav class="main-menu__list"><a class="main-menu__link link" href="#visiting">Visiting</a><a class="main-menu__link link" href="#explore">Explore</a><a class="main-menu__link link" href="#video">Video</a><a class="main-menu__link link" href="#gallery">Gallery</a><a class="main-menu__link link" href="#tickets">Tickets</a><a class="main-menu__link link" href="#contacts">Contacts</a>
+							</nav>
+						</div>
+						<nav class="social"><a class="social__item" href="#" aria-label="link to youtube">
+							<svg class="icon">
+								<use xlink:href="./images/sprite.svg#social-youtube"></use>
+							</svg></a><a class="social__item" href="#" aria-label="link to instagram">
+							<svg class="icon">
+								<use xlink:href="./images/sprite.svg#social-insta"></use>
+							</svg></a><a class="social__item" href="#" aria-label="link to facebook">
+							<svg class="icon">
+								<use xlink:href="./images/sprite.svg#social-fb"></use>
+							</svg></a><a class="social__item" href="#" aria-label="link to twitter">
+							<svg class="icon">
+								<use xlink:href="./images/sprite.svg#social-tw"></use>
+							</svg></a><a class="social__item" href="#" aria-label="link to pinterest">
+							<svg class="icon">
+								<use xlink:href="./images/sprite.svg#social-pint"></use>
+							</svg></a>
+						</nav>
+					</div>
+					<div class="footer__bot">
+						<div class="copyright">©2021</div><a class="footer__link link" href="https://rs.school/js/" target="_blank">The Rolling Scopes School</a><a class="footer__link link" href="https://github.com/Ferym26/rolling-scopes-school/tree/museum/museum" target="_blank">Ferym26</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- Модальные окна-->
+		<!-- Полключение стилей компонентов-->
+		<link rel="stylesheet" href="./css/a-styles/style.css"/>
+		<!-- Либы, используемые на всех страницах-->
+		<script src="./js/vendors/jquery-3.6.0.min.js" defer></script>
+		<script src="./js/vendors/svg4everybody.js" defer></script>
+		<!-- Скролл эвенты-->
+		<script src="./js/vendors/noframework.waypoints.min.js" defer></script>
+		<!-- Вялая загрузка картинок-->
+		<script src="./js/vendors/lazyload.min.js" defer></script>
+		<!-- Либы, используемые только на конкретной странице-->
+		<script src="./js/vendors/tiny-slider.js" defer></script>
+		<!-- Основные скрипты для всех страниц-->
+		<script src="./js/index.js" defer></script>
+	</body>
+</html>
