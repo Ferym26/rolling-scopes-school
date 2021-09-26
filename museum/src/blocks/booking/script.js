@@ -1,6 +1,7 @@
 const Booking = {
 	init() {
 		this.showHandler();
+		// this.btnClickEffect();
 	},
 	showHandler() {
 		const bookingBox = document.querySelector('.booking');
@@ -16,6 +17,24 @@ const Booking = {
 		layout.addEventListener('click', function() {
 			bookingBox.classList.remove('is-open');
 		});
+	},
+	btnClickEffect() {
+		const btn = document.querySelector('.booking__action .btn-main')
+		btn.addEventListener('click', function (e) {
+			const x = e.clientX
+			const y = e.clientY
+			const buttonTop = e.target.offsetTop
+			const buttonLeft = e.target.offsetLeft
+			console.log(e.target);
+			const xInside = x - buttonLeft
+			const yInside = y - buttonTop
+			const circle = document.createElement('span')
+			circle.classList.add('circle-effect')
+			circle.style.top = yInside + 'px'
+			circle.style.left = xInside + 'px'
+			this.appendChild(circle)
+			// setTimeout(() => circle.remove(), 500)
+		})
 	},
 }
 

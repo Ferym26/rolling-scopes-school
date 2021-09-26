@@ -12,11 +12,22 @@
 		height: 620px
 
 	&__name
-		margin-bottom: 40px
+		max-width: 230px
+		margin-bottom: 50px
 		font-weight: 500
 		font-size: 28px
+		line-height: 1.2
 
 	&__text
 
 		&:not(:last-child)
-			margin-bottom: 15px
+			margin-bottom: 20px
+
+		a
+			color: #000
+			text-decoration: none
+			transition: color 0.3s ease
+
+			&:hover
+				color: $c-main
+				text-decoration: none

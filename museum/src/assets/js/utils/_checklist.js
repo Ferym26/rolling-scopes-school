@@ -67,19 +67,19 @@ const checklist = () => {
 			value: 5,
 		},
 		{
-			task: 'секция Welcome +5',
+			task: 'секция Welcome',
 			value: 5,
 		},
 		{
-			task: 'секция Visiting +5',
+			task: 'секция Visiting',
 			value: 5,
 		},
 		{
-			task: 'секция Explore +5',
+			task: 'секция Explore',
 			value: 5,
 		},
 		{
-			task: 'секция Video +5',
+			task: 'секция Video',
 			value: 5,
 		},
 		{
@@ -188,11 +188,11 @@ const checklist = () => {
 		},
 		{
 			task: 'кликами по кнопкам + и - в секции Tiskets можно менять количество билетов Basic и Senior',
-			value: 2,
+			value: 0,
 		},
 		{
 			task: 'кнопке "Book" в форме покупки билетов добавлен ripple-эффект',
-			value: 2,
+			value: 0,
 		},
 		{
 			task: 'при перезагрузке (обновлении) страницы картины в блоке Galery отображаются в рандомном порядке',

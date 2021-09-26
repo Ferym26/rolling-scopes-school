@@ -2,32 +2,32 @@
 	var socialList = [
 		{
 			name: 'youtube',
-			link: '#',
+			link: 'https://www.youtube.com/user/louvre',
 			icon: 'social-youtube',
 		},
 		{
 			name: 'instagram',
-			link: '#',
+			link: 'https://www.instagram.com/museelouvre/',
 			icon: 'social-insta',
 		},
 		{
 			name: 'facebook',
-			link: '#',
+			link: 'https://www.facebook.com/museedulouvre',
 			icon: 'social-fb',
 		},
 		{
 			name: 'twitter',
-			link: '#',
+			link: 'http://twitter.com/museelouvre',
 			icon: 'social-tw',
 		},
 		{
 			name: 'pinterest',
-			link: '#',
+			link: 'https://www.pinterest.fr/museedulouvre/',
 			icon: 'social-pint',
 		},
 	]
 
 +b('nav').social
 	each item in socialList
-		+e('a').__item(href=item.link aria-label=`link to ${item.name}`)
+		+e('a').__item(href=item.link aria-label=`link to ${item.name}` target='_blank')
 			+icon(item.icon)

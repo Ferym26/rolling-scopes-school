@@ -15,9 +15,26 @@
 		font-weight: 400
 		color: #030303
 
+		&[type="date"]::-webkit-inner-spin-button,
+		&[type="date"]::-webkit-calendar-picker-indicator
+			display: none
+			-webkit-appearance: none
+
+		&[type="time"]::-webkit-calendar-picker-indicator
+			background: none
+
 	.icon-type
 		position: absolute
 		left: 10px
 		+hcenter
 		+sizeblock(15px)
 		fill: #000
+
+	.icon-arrow
+		position: absolute
+		right: 10px
+		+hcenter
+		+sizeblock(17px)
+		fill: #000
+		pointer-events: none
+

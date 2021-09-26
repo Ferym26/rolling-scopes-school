@@ -13,18 +13,12 @@
 					+e.__head-descr Tour to Louvre
 				+e.__form
 					.form-row.col2
-						.b-select
-							select.b-select__field(name="date")
-								option(value="q") 1
-								option(value="q") 1
-								option(value="q") 1
+						.b-input
+							input.b-input__field(type="date" placeholder='Name')
 							+icon('date', 'icon-type')
 							+icon('select-arrow', 'icon-arrow')
-						.b-select
-							select.b-select__field(name="time")
-								option(value="q") 1
-								option(value="q") 1
-								option(value="q") 1
+						.b-input
+							input.b-input__field(type="time" placeholder='Name')
 							+icon('time', 'icon-type')
 							+icon('select-arrow', 'icon-arrow')
 					.form-row
@@ -41,7 +35,7 @@
 							+icon('tel', 'icon-type')
 					.form-row
 						.b-select
-							select.b-select__field(name="date")
+							select.b-select__field(name="date" placeholder='Ticket Type')
 								option(value="q") 1
 								option(value="q") 1
 								option(value="q") 1

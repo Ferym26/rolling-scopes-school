@@ -6,7 +6,7 @@ mixin pc-counter(data = {})
 		class= data.mod ? data.mod : false
 	)
 		input.pc-counter-input.js_pc-counter-input(
-			type='text'
+			type='number'
 			value= data.value || '1'
 			data-min-value= data.min || 1
 			data-max-value= data.max || 100

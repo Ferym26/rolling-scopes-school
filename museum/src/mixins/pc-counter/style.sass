@@ -72,6 +72,14 @@
 		max-width: calc(100% - 68px)
 		user-select: none
 
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
+
+		&[type=number]
+			-moz-appearance: textfield
+
 	&--theme2
 		width: 105px
 		height: 25px
