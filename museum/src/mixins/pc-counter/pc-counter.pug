@@ -1,0 +1,15 @@
+mixin pc-counter(args = {})
+	- var id = Math.floor(Math.random() * 9999999999)
+	.pc-counter
+		input.pc-counter-input.js_pc-counter-input(
+			type='text'
+			value= args.value || '1'
+			data-min-value= args.min || 1
+			data-max-value= args.max || 100
+			data-suffix= args.unit || ''
+			name= 'NAME' + id
+			aria-label='Введите количество товаров'
+			readonly
+		)
+		button.pc-counter-btn.pc-counter-minus.js_pc-counter-minus(type='button') -
+		button.pc-counter-btn.pc-counter-plus.js_pc-counter-plus(type='button') +

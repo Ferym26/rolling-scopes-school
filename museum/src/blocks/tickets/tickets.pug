@@ -6,7 +6,25 @@
 		})
 
 		+e.__inner
-			+e.__col
+			+e.__pic
 				+lazy-img({pic: 'ticket-pic-1.jpg'})
-			+e.__col
-				p 123
+			+e.__calc
+				+e.__box.--ticket
+					+e.__box-title Ticket Type
+					+e.__box-content
+						+radio('id1', 'name', 'Permanent exhibition', true)
+						+radio('id2', 'name', 'Temporary exhibition')
+						+radio('id3', 'name', 'Combined Admission')
+				+e.__box.--amount
+					+e.__box-title Amount
+					.conte-list
+						+b.conte-elem
+							+e.__title Basic 18+
+							+pc-counter()
+						+b.conte-elem
+							+e.__title Senior 65+
+							+pc-counter()
+					+e.__result
+						+e.__result-text Total €#[span.js_result-num 220]
+					+e.__action
+						button.btn-black Buy Now
