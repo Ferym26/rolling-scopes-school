@@ -1,9 +1,11 @@
 .section-title
 	$this: &
 	position: relative
+	display: flex
 	margin-bottom: 75px
 
 	&__text
+		flex: 1 0 auto
 		font-size: 80px
 		text-transform: uppercase
 		line-height: 1
@@ -12,6 +14,12 @@
 		font-weight: 400
 
 	&__descr
+		flex: 0 0 50%
+		max-width: 50%
+		font-weight: 300
+		font-size: 22px
+		font-family: $font-main
+		line-height: 1.6
 
 	&.is-border
 		padding-bottom: 34px
