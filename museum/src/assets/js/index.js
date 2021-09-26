@@ -6,6 +6,7 @@ import ready from './utils/_ready';
 import Welcome from '../../blocks/welcome/script'
 import Gallery from '../../blocks/gallery/script'
 import Video from '../../blocks/video/script'
+import videoPlayer from '../../blocks/video-player/script'
 // Mixins
 
 ready(() => {
@@ -16,6 +17,7 @@ ready(() => {
 	Welcome();
 	Gallery();
 	Video();
+	videoPlayer.init();
 
 	// Mixins
 
