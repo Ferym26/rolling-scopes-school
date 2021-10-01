@@ -3,15 +3,17 @@
 	&__inner
 		display: flex
 
+		+media($llg)
+			display: block
+
 	&__content
 		flex: 0 0 50%
 		max-width: 50%
 		padding-right: 60px
 
-	&__slider
-		flex: 0 0 50%
-		max-width: 50%
-		margin-top: 10px
+		+media($llg)
+			max-width: 100%
+			padding-right: 0
 
 	&__article
 
@@ -22,5 +24,63 @@
 			&:not(:last-child)
 				margin-bottom: 25px
 
+				+media($llg)
+					margin-bottom: 5px
+
+			&:last-child
+
+				+media($llg)
+					display: none
+
 		.accent
 			color: $c-main
+
+	.e-slider
+		position: relative
+		flex: 0 0 720px
+		max-width: 720px
+		width: 100%
+		margin-top: 10px
+		z-index: 10
+
+		+media($llg)
+			margin: 62px auto 0
+
+		&__fig
+
+		&__cursor
+			position: absolute
+			left: 421px
+			top: 0
+			bottom: 0
+			+sizeblock(39px, 100%)
+			overflow: hidden
+			cursor: pointer
+			z-index: 20
+
+			&:hover
+
+				.e-slider__cursor-circle
+					background-color: #fff
+
+			&-circle
+				position: absolute
+				+sizeblock(39px)
+				+circle
+				left: 0
+				+hcenter
+				border: 5px solid #fff
+				transition: background-color 0.3s ease-in-out
+
+				&:after,
+				&:before
+					+pseudo
+					+sizeblock(5px, 340px)
+					+wcenter
+					background-color: #fff
+
+				&:after
+					bottom: 100%
+
+				&:before
+					top: 100%

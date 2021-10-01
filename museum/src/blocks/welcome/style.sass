@@ -18,6 +18,9 @@
 		padding-top: 150px
 		z-index: 20
 
+		+media($llg)
+			padding-top: 50px
+
 	&__title
 		margin-bottom: 25px
 		font-weight: 400
@@ -27,14 +30,25 @@
 		line-height: 1.1
 		color: #fff
 
+		+media($llg)
+			margin-bottom: 21px
+			font-size: 50px
+			line-height: 1.8
+
 	&__descr
 		font-size: 28px
 		font-weight: 300
 		letter-spacing: 2px
 		color: #fff
 
+		+media($llg)
+			font-size: 24px
+
 	&__action
 		margin-top: 70px
+
+		+media($llg)
+			margin-top: 47px
 
 .slider-welcome
 	position: relative
@@ -42,6 +56,10 @@
 	height: 750px
 	margin-left: auto
 	z-index: 10
+
+	+media($llg)
+		width: 700px
+		height: 525px
 
 	&::before
 		+pseudo
@@ -66,18 +84,36 @@
 		padding: 40px 72px
 		background-color: #000
 
+		+media($llg)
+
+			&:before
+				+pseudo
+				+sizeblock(50vw, 100%)
+				top: 0
+				right: 100%
+				bottom: 0
+				background-color: #000
+
 		&-counter
 			margin-right: 55px
 			color: #fff
+
+			+media($llg)
+				margin-right: 44px
 
 			.devider
 				display: inline-block
 				margin: 0 5px
 
 		&-dots
+			display: flex
 			margin-right: 55px
 
+			+media($llg)
+				margin-right: 38px
+
 			.dot
+				display: block
 				+sizeblock(16px)
 				padding: 0
 				background-color: #fff
@@ -86,8 +122,14 @@
 				cursor: pointer
 				transition: background-color 0.3s ease
 
+				+media($llg)
+					+sizeblock(12px)
+
 				&:not(:last-child)
 					margin-right: 20px
+
+					+media($llg)
+						margin-right: 25px
 
 				&.tns-nav-active
 					background-color: #D2B183

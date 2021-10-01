@@ -8,6 +8,7 @@ import Gallery from '../../blocks/gallery/script'
 import Video from '../../blocks/video/script'
 import videoPlayer from '../../blocks/video-player/script'
 import Booking from '../../blocks/booking/script'
+import MainMenu from '../../blocks/main-menu/script'
 // Mixins
 
 ready(() => {
@@ -20,6 +21,7 @@ ready(() => {
 	Video();
 	videoPlayer.init();
 	Booking.init();
+	MainMenu();
 
 	// Mixins
 

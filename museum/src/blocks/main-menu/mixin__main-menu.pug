@@ -1,0 +1,42 @@
+-
+	var menuList = [
+		{
+			name: 'Visiting',
+			link: '#visiting',
+		},
+		{
+			name: 'Explore',
+			link: '#explore',
+		},
+		{
+			name: 'Video',
+			link: '#video',
+		},
+		{
+			name: 'Gallery',
+			link: '#gallery',
+		},
+		{
+			name: 'Tickets',
+			link: '#tickets',
+		},
+		{
+			name: 'Contacts',
+			link: '#contacts',
+		},
+	]
+
+mixin main-menu(data)
+
+	+b.main-menu(
+		class=data.type=='mobile' ? 'js_main-menu' : false
+	)
+
+		if data.type == 'mobile'
+			+e('button').__btn.js_main-menu-btn(aria-label='Button close mobile menu')
+				+icon('menu-btn-open', 'icon-open')
+				+icon('menu-btn-close', 'icon-close')
+
+		+e('nav').__list
+			each item in menuList
+				+e('a').__link.link(href=item.link)= item.name

@@ -4,5 +4,13 @@
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
 		grid-template-rows: auto
-		grid-column-gap: 60px
-		grid-row-gap: 72px
+		grid-gap: 72px 60px
+
+		+media($llg)
+			grid-template-columns: repeat(2, 1fr)
+			grid-gap: 57px 108px
+			max-width: 768px
+			width: 100%
+			margin: 0 auto
+
+	&.section

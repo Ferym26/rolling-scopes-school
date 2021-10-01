@@ -1,0 +1,64 @@
+.main-menu
+	$this: &
+
+	&__list
+		display: flex
+
+	&__link
+		display: inline-block
+
+		&:not(:last-child)
+			margin-right: 56px
+
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+		+sizeblock(32px)
+		padding: 0
+		background-color: $trp
+		border: none
+
+		+mediaMin($llg)
+			display: none
+
+		&:focus
+			background-color: green
+
+		.icon
+			display: block
+			+sizeblock(100%)
+			fill: #fff
+
+		.icon-open
+
+		.icon-close
+			display: none
+
+
+
+	.header &
+
+		&__list
+
+			+media($llg)
+				position: absolute
+				flex-direction: column
+				top: 0
+				left: 0
+				transform: translate(-101%, 0)
+				will-change: transform
+				transition: transform 0.5s ease-in-out
+				background-color: red
+				z-index: 100
+
+		&.is-open
+
+			.main-menu__list
+				transform: translate(0%, 0)
+
+			.icon-open
+				display: none
+
+			.icon-close
+				display: block

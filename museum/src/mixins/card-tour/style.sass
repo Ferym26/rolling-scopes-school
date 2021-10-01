@@ -34,6 +34,10 @@
 			font-weight: 400
 			text-decoration: none
 
+			+media($llg)
+				font-size: 28px
+				letter-spacing: 3px
+
 			&::before
 				+pseudo
 				+sizeblock(100%)
@@ -59,6 +63,9 @@
 			transition: transform 0.3s ease-in-out
 			will-chage: transform
 
+			+media($llg)
+				transform: scale(0.45, 1)
+
 		.text
 			font-weight: 200
 
@@ -67,3 +74,5 @@
 
 			&--fz2
 				font-size: 18px
+
+				font-size: 16px
