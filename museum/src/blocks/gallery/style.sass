@@ -3,11 +3,17 @@
 	.section-title
 		margin-bottom: 85px
 
+		+media($llg)
+			margin-bottom: 70px
+
 	&__body
 		position: relative
 		height: 1960px
 		overflow: hidden
 		z-index: 10
+
+		+media($llg)
+			height: 1265px
 
 		&:after
 			+pseudo

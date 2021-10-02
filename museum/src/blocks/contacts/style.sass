@@ -11,6 +11,11 @@
 		max-width: 960px
 		height: 620px
 
+		+media($llg)
+			flex: 0 0 694px
+			max-width: 694px
+			height: 454px
+
 	&__name
 		max-width: 230px
 		margin-bottom: 50px
@@ -18,10 +23,17 @@
 		font-size: 28px
 		line-height: 1.2
 
+		+media($llg)
+			margin-bottom: 31px
+			font-size: 24px
+
 	&__text
 
 		&:not(:last-child)
 			margin-bottom: 20px
+
+			+media($llg)
+				margin-bottom: 10px
 
 		a
 			color: #000
@@ -31,3 +43,8 @@
 			&:hover
 				color: $c-main
 				text-decoration: none
+
+	&.section
+
+		+media($llg)
+			padding-bottom: 63px

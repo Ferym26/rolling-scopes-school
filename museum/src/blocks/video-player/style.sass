@@ -2,7 +2,9 @@
 
 	&__media
 		position: relative
-		height: 650px
+		width: 100%
+		aspect-ratio: calc(1440 / 650) / 1
+		// height: 650px
 
 	&__nav
 		display: flex
@@ -13,6 +15,10 @@
 		background-color: #000
 		color: #fff
 
+		+media($llg)
+			height: 60px
+			padding: 0 36px
+
 	&__play
 		margin-right: 40px
 
@@ -21,13 +27,22 @@
 		max-width: 100%
 		margin-right: 53px
 
+		+media($llg)
+			margin-right: 35px
+
 	&__volume-btn
 		margin-right: 50px
+
+		+media($llg)
+			margin-right: 15px
 
 	&__progress-volume
 		flex: 0 0 155px
 		max-width: 155px
 		margin-right: 55px
+
+		+media($llg)
+			margin-right: 35px
 
 	&__fullpage
 
@@ -41,6 +56,9 @@
 		background-color: $trp
 		cursor: pointer
 
+		+media($llg)
+			+sizeblock(152px)
+
 		.icon
 			display: block
 			+sizeblock(100%)
@@ -53,6 +71,9 @@
 		border: none
 		background-color: $trp
 		cursor: pointer
+
+		+media($llg)
+			+sizeblock(28px)
 
 		.icon
 			display: block

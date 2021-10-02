@@ -8,8 +8,8 @@ mixin pc-counter(data = {})
 		input.pc-counter-input.js_pc-counter-input(
 			type='number'
 			value= data.value || '1'
-			data-min-value= data.min || 1
-			data-max-value= data.max || 100
+			min= data.min || 1
+			max= data.max || 20
 			data-suffix= data.unit || ''
 			name= 'NAME' + id
 			aria-label='Enter quantity'

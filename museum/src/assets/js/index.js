@@ -9,6 +9,7 @@ import Video from '../../blocks/video/script'
 import videoPlayer from '../../blocks/video-player/script'
 import Booking from '../../blocks/booking/script'
 import MainMenu from '../../blocks/main-menu/script'
+import counter from '../../mixins/pc-counter/script'
 // Mixins
 
 ready(() => {
@@ -22,6 +23,7 @@ ready(() => {
 	videoPlayer.init();
 	Booking.init();
 	MainMenu();
+	counter();
 
 	// Mixins
 

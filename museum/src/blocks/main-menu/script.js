@@ -21,9 +21,9 @@ const MainMenu = () => {
 		link.addEventListener('click', closeMenu);
 	});
 
-	// btnOpenMenu.addEventListener('focusout', (e) => {
-	// 	closeMenu();
-	// });
+	btnOpenMenu.addEventListener('focusout', (e) => {
+		closeMenu();
+	});
 }
 
 export default MainMenu

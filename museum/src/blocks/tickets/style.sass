@@ -8,12 +8,26 @@
 		flex: 0 0 50%
 		max-width: 50%
 
+		+media($llg)
+			flex: 0 0 700px
+			max-width: 700px
+			height: 440px
+
+		img
+			+sizeblock(100%)
+			object-fit: cover
+
 	&__calc
 		display: flex
 		justify-content: space-between
 		flex: 0 0 50%
 		max-width: 50%
 		padding-left: 60px
+
+		+media($llg)
+			flex: 1 0 auto
+			max-width: 100%
+			padding-left: 80px
 
 	&__box
 
@@ -26,16 +40,26 @@
 
 		&--ticket
 
+			+media($llg)
+				display: none
+
 		&--amount
 			display: flex
 			flex-direction: column
 			align-items: flex-end
+
+			+media($llg)
+				align-items: flex-start
 
 			#{$this}__box
 
 				&-title
 					margin-bottom: 20px
 					text-align: right
+
+					+media($llg)
+						margin-bottom: 23px
+						text-align: left
 
 	&__result
 
@@ -47,14 +71,26 @@
 	&__action
 		margin-top: 57px
 
+		+media($llg)
+			margin-top: 66px
+
 	.conte-list
 		margin-bottom: 47px
+
+		+media($llg)
+			margin-bottom: 22px
 
 	.conte-elem
 		width: 150px
 
+		+media($llg)
+			width: 175px
+
 		&:not(:last-child)
 			margin-bottom: 11px
+
+			+media($llg)
+				margin-bottom: 28px
 
 		&__title
 			margin-bottom: 9px
