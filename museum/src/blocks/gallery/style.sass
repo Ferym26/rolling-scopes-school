@@ -6,6 +6,9 @@
 		+media($llg)
 			margin-bottom: 70px
 
+		+media($lg)
+			margin-bottom: 50px
+
 	&__body
 		position: relative
 		height: 1960px
@@ -14,6 +17,9 @@
 
 		+media($llg)
 			height: 1265px
+
+		+media($lg)
+			height: 1080px
 
 		&:after
 			+pseudo
@@ -29,8 +35,20 @@
 		column-gap: 36px
 		margin-bottom: -24px
 
+		+media($lg)
+			columns: 2
+			column-gap: 24px
+
 	&.section
 		padding-bottom: 0
 
 	.gallery-img
 		margin-bottom: 24px
+
+	picture
+
+		&:first-child
+
+			+media($lg)
+				display: block
+				margin-top: 50px

@@ -1,9 +1,15 @@
 .welcome
 	padding: 0 0 60px
 
+	+media($lg)
+		padding: 0
+
 	&__inner
 		position: relative
 		display: flex
+
+		+media($lg)
+			display: block
 
 	&__content
 		position: absolute
@@ -21,6 +27,15 @@
 		+media($llg)
 			padding-top: 50px
 
+		+media($lg)
+			position: static
+			top: auto
+			bottom: auto
+			left: auto
+			max-width: 100%
+			height: auto
+			padding-top: 0px
+
 	&__title
 		margin-bottom: 25px
 		font-weight: 400
@@ -35,6 +50,11 @@
 			font-size: 50px
 			line-height: 1.8
 
+		+media($lg)
+			font-size: 40px
+			text-align: center
+			line-height: 1.5
+
 	&__descr
 		font-size: 28px
 		font-weight: 300
@@ -44,11 +64,18 @@
 		+media($llg)
 			font-size: 24px
 
+		+media($lg)
+			text-align: center
+			font-size: 20px
+
 	&__action
 		margin-top: 70px
 
 		+media($llg)
 			margin-top: 47px
+
+		+media($lg)
+			display: none
 
 .slider-welcome
 	position: relative
@@ -61,6 +88,11 @@
 		width: 700px
 		height: 525px
 
+	+media($lg)
+		width: 100%
+		height: auto
+		margin-top: 46px
+
 	&::before
 		+pseudo
 		+sizeblock(100%)
@@ -70,6 +102,9 @@
 		background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%)
 		pointer-events: none
 		z-index: 15
+
+		+media($lg)
+			display: none
 
 	&__wrap
 
@@ -94,6 +129,13 @@
 				bottom: 0
 				background-color: #000
 
+		+media($lg)
+			position: static
+			justify-content: center
+			right: auto
+			bottom: auto
+			padding: 30px 0
+
 		&-counter
 			margin-right: 55px
 			color: #fff
@@ -111,6 +153,9 @@
 
 			+media($llg)
 				margin-right: 38px
+
+			+media($lg)
+				margin-right: 45px
 
 			.dot
 				display: block

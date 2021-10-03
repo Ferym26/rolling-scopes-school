@@ -7,6 +7,7 @@
 		// height: 650px
 
 	&__nav
+		position: relative
 		display: flex
 		align-items: center
 		justify-content: space-between
@@ -19,8 +20,15 @@
 			height: 60px
 			padding: 0 36px
 
+		+media($lg)
+			height: 53px
+			padding: 0 25px
+
 	&__play
 		margin-right: 40px
+
+		+media($lg)
+			margin-right: 30px
 
 	&__progress-time
 		flex: 1 0 auto
@@ -30,11 +38,20 @@
 		+media($llg)
 			margin-right: 35px
 
+		+media($lg)
+			position: absolute
+			top: -6px
+			left: 0
+			width: 100%
+
 	&__volume-btn
 		margin-right: 50px
 
 		+media($llg)
 			margin-right: 15px
+
+		+media($lg)
+			margin-right: 30px
 
 	&__progress-volume
 		flex: 0 0 155px
@@ -43,6 +60,11 @@
 
 		+media($llg)
 			margin-right: 35px
+
+		+media($lg)
+			flex: 1 0 auto
+			max-width: 100%
+			margin-right: 30px
 
 	&__fullpage
 
@@ -58,6 +80,9 @@
 
 		+media($llg)
 			+sizeblock(152px)
+
+		+media($lg)
+			+sizeblock(80px)
 
 		.icon
 			display: block

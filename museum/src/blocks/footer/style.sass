@@ -9,6 +9,10 @@
 		+media($llg)
 			padding: 60px 0 46px
 
+		+media($lg)
+			flex-wrap: wrap
+			padding: 48px 0 39px
+
 		&:before
 			+pseudo
 			+sizeblock(100vw, 3px)
@@ -16,13 +20,22 @@
 			bottom: 0
 			background-color: #666
 
+			+media($lg)
+				height: 1px
+
 	&__bot
 		display: flex
 		align-items: center
 		justify-content: space-between
 		padding: 45px 0
 
+		+media($lg)
+			padding: 37px 0
+
 	&__link
+
+		+media($lg)
+			font-size: 22px
 
 	.logo
 		flex: 0 0 199px
@@ -38,11 +51,19 @@
 		top: -7px
 		margin-left: auto
 
+		+media($lg)
+			top: auto
+			margin-top: 50px
+			margin-left: 298px
+
 	.main-menu
 		margin-left: 145px
 
 		+media($llg)
 			margin-left: 40px
+
+		+media($lg)
+			margin-left: 100px
 
 		&__list
 			display: block
@@ -53,12 +74,23 @@
 			+media($llg)
 				width: 395px
 
+			+media($lg)
+				width: 425px
+
+			+media($lg)
+				margin-bottom: -20px
+
 		&__link
 			width: 200px
 			margin-bottom: 22px
 
 			+media($llg)
 				margin-bottom: 26px
+
+			+media($lg)
+				width: 150px
+				margin-bottom: 20px
+				font-size: 18px
 
 			&:not(:last-child)
 				margin-right: 0

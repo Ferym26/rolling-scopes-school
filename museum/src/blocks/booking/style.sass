@@ -15,14 +15,14 @@
 	&.is-open
 		pointer-events: initial
 
-		#{$this}__layout
+		#{$this}__overlay
 			opacity: 1
 			pointer-events: initial
 
 		#{$this}__inner
 			transform: translate(0%, 0)
 
-	&__layout
+	&__overlay
 		position: absolute
 		top: 0
 		right: 0
@@ -48,8 +48,14 @@
 		background-color: #fff
 		transform: translate(-101vw, 0)
 		transition: transform 0.5s ease-in-out
-		overflow-y: auto
 		z-index: 1020
+
+		+media($llg)
+			overflow-y: auto
+
+		+media($lg)
+			max-width: 590px
+			max-height: initial
 
 	&__content
 		display: flex
@@ -62,9 +68,17 @@
 		+media($llg)
 			padding: 75px 0
 
+		+media($lg)
+			display: block
+			max-width: 100%
+			padding: 80px 30px 40px
+
 	&__meta
 		flex: 0 0 400px
 		max-width: 400px
+
+		+media($lg)
+			max-width: 100%
 
 	&__overview
 		flex: 0 0 530px
@@ -72,11 +86,19 @@
 		border: 1px solid #000
 		padding: 25px 30px
 
+		+media($lg)
+			max-width: 100%
+			margin-top: 50px
+			padding: 25px 15px
+
 	&__head
 		margin-top: 35px
 		margin-bottom: 60px
 		padding-bottom: 6px
 		border-bottom: 3px solid $red-dark
+
+		+media($lg)
+			margin-bottom: 40px
 
 		&-title
 			position: relative
@@ -226,6 +248,9 @@
 		position: relative
 		margin-top: 6px
 		padding-bottom: 30px
+
+		+media($lg)
+			margin-top: 12px
 
 		.b-card
 			+sizeblock(360px, 211px)

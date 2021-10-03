@@ -13,6 +13,11 @@
 			max-width: 700px
 			height: 440px
 
+		+media($lg)
+			flex: 0 0 444px
+			max-width: 444px
+			height: 340px
+
 		img
 			+sizeblock(100%)
 			object-fit: cover
@@ -28,6 +33,9 @@
 			flex: 1 0 auto
 			max-width: 100%
 			padding-left: 80px
+
+		+media($lg)
+			padding-left: 60px
 
 	&__box
 
@@ -61,6 +69,9 @@
 						margin-bottom: 23px
 						text-align: left
 
+					+media($lg)
+						margin-bottom: 32px
+
 	&__result
 
 		&-text
@@ -74,11 +85,17 @@
 		+media($llg)
 			margin-top: 66px
 
+		+media($lg)
+			margin-top: 36px
+
 	.conte-list
 		margin-bottom: 47px
 
 		+media($llg)
 			margin-bottom: 22px
+
+		+media($lg)
+			margin-bottom: 36px
 
 	.conte-elem
 		width: 150px
@@ -92,5 +109,13 @@
 			+media($llg)
 				margin-bottom: 28px
 
+			+media($lg)
+				margin-bottom: 23px
+
 		&__title
 			margin-bottom: 9px
+
+	&.section
+
+		+media($lg)
+			padding-bottom: 40px

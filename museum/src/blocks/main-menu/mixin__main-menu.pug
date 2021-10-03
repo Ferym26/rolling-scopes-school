@@ -37,6 +37,19 @@ mixin main-menu(data)
 				+icon('menu-btn-open', 'icon-open')
 				+icon('menu-btn-close', 'icon-close')
 
-		+e('nav').__list
-			each item in menuList
-				+e('a').__link.link(href=item.link)= item.name
+		if data.type == 'mobile'
+			+e.__mob-wrap
+				+e.__mob-scroll
+					+e('nav').__list
+						each item in menuList
+							+e('a').__link.link(href=item.link)= item.name
+					+e.__gallery
+						+lazy-img({pic: 'main-menu-gallery-1.jpg', mode: 'mm-pic mm-pic--big'})
+						+lazy-img({pic: 'main-menu-gallery-2.jpg', mode: 'mm-pic mm-pic--small'})
+						+lazy-img({pic: 'main-menu-gallery-3.jpg', mode: 'mm-pic mm-pic--small'})
+					+e.__social
+						include ../social/social
+		else
+			+e('nav').__list
+				each item in menuList
+					+e('a').__link.link(href=item.link)= item.name

@@ -4,6 +4,9 @@
 		display: flex
 		justify-content: space-between
 
+		+media($lg)
+			display: block
+
 	&__content
 
 	&__map
@@ -16,6 +19,11 @@
 			max-width: 694px
 			height: 454px
 
+		+media($lg)
+			max-width: 100%
+			height: auto
+			margin-top: 35px
+
 	&__name
 		max-width: 230px
 		margin-bottom: 50px
@@ -26,6 +34,9 @@
 		+media($llg)
 			margin-bottom: 31px
 			font-size: 24px
+
+		+media($lg)
+			font-size: 20px
 
 	&__text
 
@@ -48,3 +59,6 @@
 
 		+media($llg)
 			padding-bottom: 63px
+
+		+media($lg)
+			padding-bottom: 74px

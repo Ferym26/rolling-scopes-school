@@ -9,8 +9,15 @@
 		+media($llg)
 			grid-template-columns: repeat(2, 1fr)
 			grid-gap: 57px 108px
-			max-width: 768px
+			max-width: calc(100% - (108px * 2))
 			width: 100%
 			margin: 0 auto
 
+		+media($lg)
+			max-width: calc(100% - (56px * 2))
+			grid-gap: 37px 56px
+
 	&.section
+
+		+media($lg)
+			padding-bottom: 78px

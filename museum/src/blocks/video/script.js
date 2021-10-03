@@ -32,16 +32,17 @@ const Video = () => {
 		nextButton: '.slider-video-nav__btn--next',
 		navContainer: '.slider-video-nav__nav-dots',
 		// responsive: {
-		// 	640: {
-		// 		// items: 1
+		// 	1024: {
+		// 		slideBy: 1,
+		// 		gutter: 20,
 		// 	},
 		// }
 	});
-	const setSlideMain = () => {
-		let index = sliderNav.getInfo().displayIndex;
-		sliderMain.goTo(index - 1);
-	};
-	sliderNav.events.on('indexChanged', setSlideMain);
+	// const setSlideMain = () => {
+	// 	let index = sliderNav.getInfo().displayIndex;
+	// 	sliderMain.goTo(index - 1);
+	// };
+	// sliderNav.events.on('indexChanged', setSlideMain);
 }
 
 export default Video
