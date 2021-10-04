@@ -73,6 +73,9 @@
 			max-width: 100%
 			padding: 80px 30px 40px
 
+		+media(420px)
+			padding: 30px 20px 20px
+
 	&__meta
 		flex: 0 0 400px
 		max-width: 400px
@@ -172,6 +175,12 @@
 
 			+media($md)
 				+sizeblock(120px, 96px)
+
+			+media(420px)
+				position: static
+				width: auto
+				height: auto
+				margin-bottom: 20px
 
 			img
 				+sizeblock(100%)
