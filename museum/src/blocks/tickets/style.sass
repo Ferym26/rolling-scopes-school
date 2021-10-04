@@ -4,6 +4,9 @@
 	&__inner
 		display: flex
 
+		+media($md)
+			flex-direction: column
+
 	&__pic
 		flex: 0 0 50%
 		max-width: 50%
@@ -18,9 +21,17 @@
 			max-width: 444px
 			height: 340px
 
+		+media($md)
+			flex: 0 0 100%
+			max-width: 100%
+			height: auto
+
 		img
 			+sizeblock(100%)
 			object-fit: cover
+
+			+media($md)
+				aspect-ratio: 2.375 / 1
 
 	&__calc
 		display: flex
@@ -37,12 +48,21 @@
 		+media($lg)
 			padding-left: 60px
 
+		+media($md)
+			justify-content: center
+			margin-top: 39px
+			padding-left: 0
+
 	&__box
 
 		&-title
 			margin-bottom: 40px
 			font-size: 28px
 			font-weight: 700
+
+			+media($md)
+				width: 100%
+				font-size: 16px
 
 		&-content
 
@@ -72,12 +92,25 @@
 					+media($lg)
 						margin-bottom: 32px
 
+					+media($md)
+						margin-bottom: 20px
+						text-align: center
+
 	&__result
+
+		+media($md)
+			width: 100%
 
 		&-text
 			font-size: 28px
 			font-weight: 700
 			letter-spacing: 1.65px
+
+			+media($md)
+				width: 100%
+				font-size: 18px
+				text-align: center
+				letter-spacing: 0
 
 	&__action
 		margin-top: 57px
@@ -87,6 +120,11 @@
 
 		+media($lg)
 			margin-top: 36px
+
+		+media($md)
+			display: flex
+			justify-content: center
+			width: 100%
 
 	.conte-list
 		margin-bottom: 47px

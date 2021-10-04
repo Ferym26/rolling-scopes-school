@@ -55,6 +55,9 @@
 			text-align: center
 			line-height: 1.5
 
+		+media($md)
+			font-size: 28px
+
 	&__descr
 		font-size: 28px
 		font-weight: 300
@@ -67,6 +70,9 @@
 		+media($lg)
 			text-align: center
 			font-size: 20px
+
+		+media($md)
+			font-size: 16px
 
 	&__action
 		margin-top: 70px
@@ -92,6 +98,9 @@
 		width: 100%
 		height: auto
 		margin-top: 46px
+
+	+media($md)
+		margin-top: 52px
 
 	&::before
 		+pseudo
@@ -136,12 +145,18 @@
 			bottom: auto
 			padding: 30px 0
 
+		+media($md)
+			padding: 25px 0
+
 		&-counter
 			margin-right: 55px
 			color: #fff
 
 			+media($llg)
 				margin-right: 44px
+
+			+media($md)
+				margin-right: 25px
 
 			.devider
 				display: inline-block
@@ -157,6 +172,9 @@
 			+media($lg)
 				margin-right: 45px
 
+			+media($md)
+				margin-right: 25px
+
 			.dot
 				display: block
 				+sizeblock(16px)
@@ -170,11 +188,17 @@
 				+media($llg)
 					+sizeblock(12px)
 
+				+media($md)
+					+sizeblock(7px)
+
 				&:not(:last-child)
 					margin-right: 20px
 
 					+media($llg)
 						margin-right: 25px
+
+					+media($md)
+						margin-right: 10px
 
 				&.tns-nav-active
 					background-color: #D2B183
@@ -195,6 +219,9 @@
 		background-color: $trp
 		cursor: pointer
 
+		+media($md)
+			+sizeblock(30px)
+
 		&:hover
 
 			.icon
@@ -205,8 +232,14 @@
 			fill: #fff
 			transition: fill 0.3s ease
 
+			+media($md)
+				+sizeblock(20px, 8px)
+
 		&--prev
 			margin-right: 10px
+
+			+media($md)
+				margin-right: 5px
 
 			.icon
 				transform: scale(-1, 1)

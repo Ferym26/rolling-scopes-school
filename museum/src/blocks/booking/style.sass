@@ -108,6 +108,9 @@
 			color: $c-main
 			font-family: $font-sec
 
+			+media($md)
+				font-size: 32px
+
 			.b-logo
 				position: absolute
 				left: 0
@@ -166,6 +169,9 @@
 			top: 0
 			right: 0
 			+sizeblock(150px, 120px)
+
+			+media($md)
+				+sizeblock(120px, 96px)
 
 			img
 				+sizeblock(100%)
@@ -252,8 +258,14 @@
 		+media($lg)
 			margin-top: 12px
 
+		+media($md)
+			padding-bottom: 0
+
 		.b-card
 			+sizeblock(360px, 211px)
+
+			+media($md)
+				+sizeblock(100%, auto)
 
 			&--front
 				position: relative
@@ -265,10 +277,17 @@
 				left: 110px
 				z-index: 10
 
+				+media($md)
+					position: static
+					margin-top: 25px
+
 	&__action
 		display: flex
 		justify-content: flex-end
 		margin-top: 26px
+
+		+media($md)
+			margin-top: 40px
 
 		.btn-main
 			width: 220px
