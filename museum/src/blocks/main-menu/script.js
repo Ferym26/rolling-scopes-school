@@ -16,7 +16,6 @@ const MainMenu = () => {
 	}
 	btnOpenMenu.addEventListener('click', toggleMenu);
 	// overlay.addEventListener('click', closeMenu);
-	console.log(links);
 	links.forEach((link) => {
 		link.addEventListener('click', closeMenu);
 	});
