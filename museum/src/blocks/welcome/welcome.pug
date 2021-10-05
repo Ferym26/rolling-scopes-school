@@ -9,7 +9,10 @@
 			+b.slider-welcome
 				+e.__wrap.js_slider-welcome
 					+e.__slide
-						img(src="images/ws-1.jpg" alt="slide 1")
+						picture
+							source(media=`(max-width: 449px)` srcset=`images/ws-1-mob.jpg`)
+							source(media=`(min-width: 450px)` srcset=`images/ws-1.jpg`)
+							img(src='images/ws-1.jpg' alt='pic')
 					+e.__slide
 						img.tns-lazy-img(data-src="images/ws-2.jpg" src=pixel alt="slide 2")
 					+e.__slide
