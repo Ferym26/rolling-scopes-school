@@ -17,7 +17,7 @@ ready(() => {
 	// Components
 
 	// Blocks
-	Welcome();
+	Welcome.init();
 	Gallery();
 	Video();
 	videoPlayer.init();

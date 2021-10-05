@@ -2,7 +2,7 @@ import global from './_global';
 import svgPolifill from './_svgPolifill';
 import userAgentCheck from './_userAgentCheck';
 import lazyLoad from './_lazy';
-import validation from './_validation';
+// import validation from './_validation';
 import checklist from './_checklist';
 
 const utils = () => {
@@ -10,7 +10,7 @@ const utils = () => {
 	svgPolifill();
 	userAgentCheck();
 	lazyLoad();
-	validation();
+	// validation();
 	checklist();
 	if (window.matchMedia(`(max-width: ${settings.mobBreakpoint - 1}px)`).matches) {
 		//
