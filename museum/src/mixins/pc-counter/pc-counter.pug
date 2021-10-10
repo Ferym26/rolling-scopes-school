@@ -1,16 +1,17 @@
-mixin pc-counter(data = {})
+mixin pc-counter(arsg)
 
 	- var id = Math.floor(Math.random() * 9999999999)
 
 	+b.pc-counter(
-		class= data.mod ? data.mod : false
+		class= arsg.mod ? arsg.mod : false
 	)
 		input.pc-counter-input.js_pc-counter-input(
+			v-model=arsg.vmodel
 			type='number'
-			value= data.value || '1'
-			min= data.min || 1
-			max= data.max || 20
-			data-suffix= data.unit || ''
+			value= arsg.value || '1'
+			min= arsg.min || 1
+			max= arsg.max || 20
+			data-suffix= arsg.unit || ''
 			name= 'NAME' + id
 			aria-label='Enter quantity'
 			readonly

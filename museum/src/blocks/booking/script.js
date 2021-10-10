@@ -38,20 +38,26 @@ const Booking = {
 		})
 	},
 	calc() {
-		// Vue.config.debug = true;
-		// Vue.config.devtools = true;
-		const vm = new Vue({
-			el: '#app',
-			data: () => ({
-				init: 123,
-			}),
-			// methods: {
+		const price = {
+			basic: 20,
+			senior: 10,
+		}
+		const resultNode = document.querySelector('.js_result-num');
+		const btn = document.querySelectorAll('.pc-counter-btn');
+		const calc = (inputBval, inputSval) => {
+			return inputBval * price.basic + inputSval * price.senior
+		}
+		btn.forEach(item => {
+			item.addEventListener('click', function(e) {
+				const inputB = document.querySelector('.js_counter-basic');
+				const inputS = document.querySelector('.js_counter-senior');
+				setTimeout(() => {
+					resultNode.innerHTML = calc(inputB.value, inputS.value);
+				}, 0)
+			})
+		})
 
-			// },
-			// computed: {
 
-			// }
-		});
 	}
 }
 

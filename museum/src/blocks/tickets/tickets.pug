@@ -1,5 +1,5 @@
 +b('section').tickets.section#tickets
-	.container#app
+	.container
 		+section-title({
 			mode: 'is-border',
 			text: 'Buy tickets',
@@ -17,15 +17,39 @@
 						+radio('id3', 'name', 'Combined Admission')
 				+e.__box.--amount
 					+e.__box-title Amount
-					.conte-list
-						+b.conte-elem
-							+e.__title Basic 18+
-							+pc-counter()
-						+b.conte-elem
-							+e.__title Senior 65+
-							+pc-counter()
-					+e.__result
-						+e.__result-text Total €#[span.js_result-num 220]
+					#app-calc-one
+						.conte-list
+							+b.conte-elem
+								+e.__title Basic 18+
+								+b.pc-counter
+									input.pc-counter-input.js_pc-counter-input(
+										class='js_counter-basic'
+										type='number'
+										value= '0'
+										min='0'
+										max='20'
+										name= 'basic'
+										aria-label='Enter quantity'
+										readonly
+									)
+									button.pc-counter-btn.pc-counter-minus.js_pc-counter-minus(type='button') -
+									button.pc-counter-btn.pc-counter-plus.js_pc-counter-plus(type='button') +
+							+b.conte-elem
+								+e.__title Senior 65+
+								+b.pc-counter
+									input.pc-counter-input.js_pc-counter-input(
+										class='js_counter-senior'
+										type='number'
+										value= '0'
+										min='0'
+										max='20'
+										name= 'senior'
+										aria-label='Enter quantity'
+										readonly
+									)
+									button.pc-counter-btn.pc-counter-minus.js_pc-counter-minus(type='button') -
+									button.pc-counter-btn.pc-counter-plus.js_pc-counter-plus(type='button') +
+						+e.__result
+							+e.__result-text Total €#[span.js_result-num 0]
 					+e.__action
 						button.btn-black.js_open-booking Buy Now
-						p {{ init }}
