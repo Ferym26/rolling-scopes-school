@@ -3,22 +3,27 @@
 		{
 			poster: 'poster0.jpg',
 			thumbnail: 'poster0-thumb.jpg',
+			video: 'https://www.youtube.com/embed/zp1BXPX8jcU',
 		},
 		{
 			poster: 'poster1.jpg',
 			thumbnail: 'poster1-thumb.jpg',
+			video: 'https://www.youtube.com/embed/Vi5D6FKhRmo',
 		},
 		{
 			poster: 'poster2.jpg',
 			thumbnail: 'poster2-thumb.jpg',
+			video: 'https://www.youtube.com/embed/NOhDysLnTvY',
 		},
 		{
 			poster: 'poster3.jpg',
 			thumbnail: 'poster3-thumb.jpg',
+			video: 'https://www.youtube.com/embed/aWmJ5DgyWPI',
 		},
 		{
 			poster: 'poster4.jpg',
 			thumbnail: 'poster4-thumb.jpg',
+			video: 'https://www.youtube.com/embed/zp1BXPX8jcU',
 		},
 	]
 
@@ -33,21 +38,10 @@ include ../video-player/video-player
 
 		+b.slider-video-main
 			+e.__wrap.js_slider-video-main
+				+video-player()
+
+		//- +b.slider-video-nav
+			+e.__wrap.owl-carousel.owl-theme.js_slider-video-nav
 				each item in pics
 					+e.__slide
-						+video-player(item)
-
-		+b.slider-video-nav
-			+e.__wrap.js_slider-video-nav
-				each item in pics
-					+e.__slide
-						img.tns-lazy-img(data-src=`images/${item.thumbnail}` src=pixel alt="slide 1")
-
-			+e.__nav
-				+e('button').__btn.--prev(aria-label='Prev')
-					+icon('slider-video-arrow')
-				+e.__nav-dots
-					button.dot(aria-label='dot')
-					button.dot(aria-label='dot')
-				+e('button').__btn.--next(aria-label='Next')
-					+icon('slider-video-arrow')
+						iframe(src=item.video frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)

@@ -88,6 +88,7 @@
 		"> 1%"
 	],
 	"dependencies": {
+		"owl.carousel": "^2.3.4",
 		"vinyl-ftp": "^0.6.1"
 	}
 }

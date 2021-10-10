@@ -6,6 +6,11 @@
 		aspect-ratio: calc(1440 / 650) / 1
 		// height: 650px
 
+		video
+			display: block
+			+sizeblock(100%)
+			object-fit: cover
+
 	&__nav
 		position: relative
 		display: flex
@@ -77,6 +82,7 @@
 		border: none
 		background-color: $trp
 		cursor: pointer
+		transition: opacity 0.4s ease
 
 		+media($llg)
 			+sizeblock(152px)
@@ -91,6 +97,10 @@
 			display: block
 			+sizeblock(100%)
 			fill: #fff
+
+		&.hide
+			opacity: 0
+			pointer-events: none
 
 	.vp-nav-btn
 		display: block

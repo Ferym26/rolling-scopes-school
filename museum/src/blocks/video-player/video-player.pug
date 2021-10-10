@@ -2,8 +2,10 @@ mixin video-player(data)
 
 	+b.video-player
 		+e.__media
-			img.tns-lazy-img(data-src=`images/${data.poster}` src=pixel alt="slide 1")
-			button.vp-btn(aria-label='Play Button')
+			//- img(src=`images/${data.poster}` alt="slide 1")
+			video.js_video(muted poster='images/poster0.jpg' preload="metadata")
+				source(src='video/video0.mp4' type="video/mp4")
+			button.vp-btn.js_play-big(aria-label='Play Button')
 				+icon('play-big')
 		+e.__nav
 			+e.__play

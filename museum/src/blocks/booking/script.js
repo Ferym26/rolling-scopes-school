@@ -2,6 +2,7 @@ const Booking = {
 	init() {
 		this.showHandler();
 		// this.btnClickEffect();
+		this.calc();
 	},
 	showHandler() {
 		const bookingBox = document.querySelector('.booking');
@@ -36,6 +37,22 @@ const Booking = {
 			// setTimeout(() => circle.remove(), 500)
 		})
 	},
+	calc() {
+		// Vue.config.debug = true;
+		// Vue.config.devtools = true;
+		const vm = new Vue({
+			el: '#app',
+			data: () => ({
+				init: 123,
+			}),
+			// methods: {
+
+			// },
+			// computed: {
+
+			// }
+		});
+	}
 }
 
 export default Booking

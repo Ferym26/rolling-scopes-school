@@ -262,6 +262,12 @@
 										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/es-before.jpg" type="image/jpeg"/><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/es-before.jpg" alt="pic"/>
 									</picture>
 								</div>
+								<div class="e-slider__fig img-comp-overlay">
+									<picture>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/es-after.webp" type="image/webp"/>
+										<source srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-srcset="images/es-after.jpg" type="image/jpeg"/><img class="lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="images/es-after.jpg" alt="pic"/>
+									</picture>
+								</div>
 								<div class="e-slider__cursor">
 									<div class="e-slider__cursor-circle">
 									</div>
@@ -280,281 +286,56 @@
 						</div>
 						<div class="slider-video-main">
 							<div class="slider-video-main__wrap js_slider-video-main">
-								<div class="slider-video-main__slide">
-													<div class="video-player">
-														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-															<button class="vp-btn" aria-label="Play Button">
-																<svg class="icon">
-																	<use xlink:href="./images/sprite.svg#play-big"></use>
+												<div class="video-player">
+													<div class="video-player__media">
+														<video class="js_video" muted poster="images/poster0.jpg" preload="metadata">
+															<source src="video/video0.mp4" type="video/mp4">
+														</video>
+														<button class="vp-btn js_play-big" aria-label="Play Button">
+															<svg class="icon">
+																<use xlink:href="./images/sprite.svg#play-big"></use>
+															</svg>
+														</button>
+													</div>
+													<div class="video-player__nav">
+														<div class="video-player__play">
+															<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
+																<svg class="icon icon-on">
+																	<use xlink:href="./images/sprite.svg#play"></use>
+																</svg>
+																<svg class="icon icon-off">
+																	<use xlink:href="./images/sprite.svg#pause"></use>
 																</svg>
 															</button>
 														</div>
-														<div class="video-player__nav">
-															<div class="video-player__play">
-																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#play"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#pause"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-time">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__volume-btn">
-																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#volume-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#volume-off"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-volume">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__fullpage">
-																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#full-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#full-off"></use>
-																	</svg>
-																</button>
-															</div>
+														<div class="video-player__progress-time">
+															<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
 														</div>
-													</div>
-								</div>
-								<div class="slider-video-main__slide">
-													<div class="video-player">
-														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-															<button class="vp-btn" aria-label="Play Button">
-																<svg class="icon">
-																	<use xlink:href="./images/sprite.svg#play-big"></use>
+														<div class="video-player__volume-btn">
+															<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
+																<svg class="icon icon-on">
+																	<use xlink:href="./images/sprite.svg#volume-on"></use>
+																</svg>
+																<svg class="icon icon-off">
+																	<use xlink:href="./images/sprite.svg#volume-off"></use>
 																</svg>
 															</button>
 														</div>
-														<div class="video-player__nav">
-															<div class="video-player__play">
-																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#play"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#pause"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-time">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__volume-btn">
-																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#volume-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#volume-off"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-volume">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__fullpage">
-																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#full-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#full-off"></use>
-																	</svg>
-																</button>
-															</div>
+														<div class="video-player__progress-volume">
+															<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
 														</div>
-													</div>
-								</div>
-								<div class="slider-video-main__slide">
-													<div class="video-player">
-														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-															<button class="vp-btn" aria-label="Play Button">
-																<svg class="icon">
-																	<use xlink:href="./images/sprite.svg#play-big"></use>
+														<div class="video-player__fullpage">
+															<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
+																<svg class="icon icon-on">
+																	<use xlink:href="./images/sprite.svg#full-on"></use>
+																</svg>
+																<svg class="icon icon-off">
+																	<use xlink:href="./images/sprite.svg#full-off"></use>
 																</svg>
 															</button>
 														</div>
-														<div class="video-player__nav">
-															<div class="video-player__play">
-																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#play"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#pause"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-time">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__volume-btn">
-																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#volume-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#volume-off"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-volume">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__fullpage">
-																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#full-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#full-off"></use>
-																	</svg>
-																</button>
-															</div>
-														</div>
 													</div>
-								</div>
-								<div class="slider-video-main__slide">
-													<div class="video-player">
-														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster3.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-															<button class="vp-btn" aria-label="Play Button">
-																<svg class="icon">
-																	<use xlink:href="./images/sprite.svg#play-big"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="video-player__nav">
-															<div class="video-player__play">
-																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#play"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#pause"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-time">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__volume-btn">
-																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#volume-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#volume-off"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-volume">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__fullpage">
-																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#full-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#full-off"></use>
-																	</svg>
-																</button>
-															</div>
-														</div>
-													</div>
-								</div>
-								<div class="slider-video-main__slide">
-													<div class="video-player">
-														<div class="video-player__media"><img class="tns-lazy-img" data-src="images/poster4.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-															<button class="vp-btn" aria-label="Play Button">
-																<svg class="icon">
-																	<use xlink:href="./images/sprite.svg#play-big"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="video-player__nav">
-															<div class="video-player__play">
-																<button class="vp-nav-btn js_btn-play" aria-label="Play Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#play"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#pause"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-time">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__volume-btn">
-																<button class="vp-nav-btn js_btn-volume-toggler" aria-label="Volume Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#volume-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#volume-off"></use>
-																	</svg>
-																</button>
-															</div>
-															<div class="video-player__progress-volume">
-																<input class="vp-progress" type="range" value="40" min="0" max="100" step="1">
-															</div>
-															<div class="video-player__fullpage">
-																<button class="vp-nav-btn js_btn-fullpage" aria-label="Fullpage Button">
-																	<svg class="icon icon-on">
-																		<use xlink:href="./images/sprite.svg#full-on"></use>
-																	</svg>
-																	<svg class="icon icon-off">
-																		<use xlink:href="./images/sprite.svg#full-off"></use>
-																	</svg>
-																</button>
-															</div>
-														</div>
-													</div>
-								</div>
-							</div>
-						</div>
-						<div class="slider-video-nav">
-							<div class="slider-video-nav__wrap js_slider-video-nav">
-								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster0-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-								</div>
-								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster1-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-								</div>
-								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster2-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-								</div>
-								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster3-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-								</div>
-								<div class="slider-video-nav__slide"><img class="tns-lazy-img" data-src="images/poster4-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="slide 1">
-								</div>
-							</div>
-							<div class="slider-video-nav__nav">
-								<button class="slider-video-nav__btn slider-video-nav__btn--prev" aria-label="Prev">
-									<svg class="icon">
-										<use xlink:href="./images/sprite.svg#slider-video-arrow"></use>
-									</svg>
-								</button>
-								<div class="slider-video-nav__nav-dots">
-									<button class="dot" aria-label="dot"></button>
-									<button class="dot" aria-label="dot"></button>
-								</div>
-								<button class="slider-video-nav__btn slider-video-nav__btn--next" aria-label="Next">
-									<svg class="icon">
-										<use xlink:href="./images/sprite.svg#slider-video-arrow"></use>
-									</svg>
-								</button>
+												</div>
 							</div>
 						</div>
 					</div>
@@ -572,7 +353,7 @@
 					</div>
 				</section>
 				<section class="tickets section" id="tickets">
-					<div class="container">
+					<div class="container" id="app">
 						<div class="section-title is-border">
 							<h2 class="section-title__text">Buy tickets
 							</h2>
@@ -607,7 +388,7 @@
 											<div class="conte-elem__title">Basic 18+
 											</div>
 											<div class="pc-counter">
-												<input class="pc-counter-input js_pc-counter-input" type="number" value="1" min="1" max="20" data-suffix="" name="NAME3801339270" aria-label="Enter quantity" readonly="readonly"/>
+												<input class="pc-counter-input js_pc-counter-input" type="number" value="1" min="1" max="20" data-suffix="" name="NAME9513742169" aria-label="Enter quantity" readonly="readonly"/>
 												<button class="pc-counter-btn pc-counter-minus js_pc-counter-minus" type="button">-</button>
 												<button class="pc-counter-btn pc-counter-plus js_pc-counter-plus" type="button">+</button>
 											</div>
@@ -616,7 +397,7 @@
 											<div class="conte-elem__title">Senior 65+
 											</div>
 											<div class="pc-counter">
-												<input class="pc-counter-input js_pc-counter-input" type="number" value="1" min="1" max="20" data-suffix="" name="NAME534860738" aria-label="Enter quantity" readonly="readonly"/>
+												<input class="pc-counter-input js_pc-counter-input" type="number" value="1" min="1" max="20" data-suffix="" name="NAME13762279" aria-label="Enter quantity" readonly="readonly"/>
 												<button class="pc-counter-btn pc-counter-minus js_pc-counter-minus" type="button">-</button>
 												<button class="pc-counter-btn pc-counter-plus js_pc-counter-plus" type="button">+</button>
 											</div>
@@ -628,6 +409,7 @@
 									</div>
 									<div class="tickets__action">
 										<button class="btn-black js_open-booking">Buy Now</button>
+										<p>{{ init }}</p>
 									</div>
 								</div>
 							</div>
@@ -746,7 +528,7 @@
 											<div class="booking__counter-text">Basic 18+ (20 €)
 											</div>
 											<div class="pc-counter pc-counter--theme2">
-												<input class="pc-counter-input js_pc-counter-input" type="number" value="1" min="1" max="20" data-suffix="" name="NAME1401708493" aria-label="Enter quantity" readonly="readonly"/>
+												<input class="pc-counter-input js_pc-counter-input" type="number" value="1" min="1" max="20" data-suffix="" name="NAME2623726953" aria-label="Enter quantity" readonly="readonly"/>
 												<button class="pc-counter-btn pc-counter-minus js_pc-counter-minus" type="button">-</button>
 												<button class="pc-counter-btn pc-counter-plus js_pc-counter-plus" type="button">+</button>
 											</div>
@@ -755,7 +537,7 @@
 											<div class="booking__counter-text">Senior 65+ (10 €)
 											</div>
 											<div class="pc-counter pc-counter--theme2">
-												<input class="pc-counter-input js_pc-counter-input" type="number" value="1" min="1" max="20" data-suffix="" name="NAME8235926611" aria-label="Enter quantity" readonly="readonly"/>
+												<input class="pc-counter-input js_pc-counter-input" type="number" value="1" min="1" max="20" data-suffix="" name="NAME6929410630" aria-label="Enter quantity" readonly="readonly"/>
 												<button class="pc-counter-btn pc-counter-minus js_pc-counter-minus" type="button">-</button>
 												<button class="pc-counter-btn pc-counter-plus js_pc-counter-plus" type="button">+</button>
 											</div>
@@ -889,6 +671,8 @@
 		<script src="./js/vendors/lazyload.min.js" defer></script>
 		<!-- Либы, используемые только на конкретной странице-->
 		<script src="./js/vendors/tiny-slider.js" defer></script>
+		<script src="./js/vendors/owl.carousel.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js" defer></script>
 		<!-- Основные скрипты для всех страниц-->
 		<script src="./js/index.js" defer></script>
 	</body>

@@ -45,6 +45,14 @@
 	&__wrap
 
 	&__slide
+		height: 254px
+
+		+media($md)
+			height: 101px
+
+		iframe
+			+sizeblock(100%)
+			object-fit: cover
 
 	&__nav
 		display: flex

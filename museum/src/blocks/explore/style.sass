@@ -43,6 +43,7 @@
 		flex: 0 0 720px
 		max-width: 720px
 		width: 100%
+		height: 700px
 		margin-top: 10px
 		z-index: 10
 
@@ -53,6 +54,14 @@
 			margin: 40px auto 0
 
 		&__fig
+			position: absolute
+			width: auto
+			height: auto
+			overflow: hidden
+
+			img
+				display: block
+				max-width: initial
 
 		&__cursor
 			position: absolute
@@ -61,7 +70,7 @@
 			bottom: 0
 			+sizeblock(39px, 100%)
 			overflow: hidden
-			cursor: pointer
+			cursor: ew-resize
 			z-index: 20
 
 			&:hover
@@ -101,3 +110,33 @@
 
 		+media($md)
 			padding-bottom: 38px
+
+
+.img-comp-container
+	position: relative
+	height: 700px
+
+
+.img-comp-img
+	position: absolute
+	width: auto
+	height: auto
+	overflow: hidden
+
+
+.img-comp-img img
+	display: block
+	vertical-align: middle
+	max-width: initial
+
+
+.img-comp-slider
+	position: absolute
+	z-index: 9
+	cursor: ew-resize
+	/*set the appearance of the slider:*/
+	width: 40px
+	height: 40px
+	background-color: #2196F3
+	opacity: 0.7
+	border-radius: 50%

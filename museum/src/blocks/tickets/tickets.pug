@@ -1,5 +1,5 @@
 +b('section').tickets.section#tickets
-	.container
+	.container#app
 		+section-title({
 			mode: 'is-border',
 			text: 'Buy tickets',
@@ -28,3 +28,4 @@
 						+e.__result-text Total €#[span.js_result-num 220]
 					+e.__action
 						button.btn-black.js_open-booking Buy Now
+						p {{ init }}
