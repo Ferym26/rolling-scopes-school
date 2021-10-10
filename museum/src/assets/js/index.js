@@ -19,7 +19,7 @@ ready(() => {
 
 	// Blocks
 	Welcome.init();
-	Gallery();
+	Gallery.init();
 	Video();
 	videoPlayer.init();
 	Booking.init();
