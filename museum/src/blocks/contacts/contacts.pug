@@ -13,9 +13,9 @@
 					+e('li').__text phone: #[a(href="tel:+33(0)140205050") +33(0) 1 40 20 50 50]
 					+e('li').__text mail: #[a(href="mailto:info@louvre.fr") info@louvre.fr]
 			+e.__map
-				+lazy-img({pic: 'map.jpg'})
-				//- iframe.mapFrame(
-				//- 	src="https://api.mapbox.com/styles/v1/sisovac417/ckuguin7m3ja417nuf7stwlqg.html?title=false&access_token=pk.eyJ1Ijoic2lzb3ZhYzQxNyIsImEiOiJja3VndHlrYWUwendsMnFudmdjOXZ3bXdmIn0.bJDcHAncLebTVqNaecJxuQ&zoomwheel=false#16/48.860878/2.334792"
-				//- 	title="Basic"
-				//- 	style="border:none"
-				//- )
+				//- +lazy-img({pic: 'map.jpg'})
+				iframe.mapFrame(
+					src="https://api.mapbox.com/styles/v1/sisovac417/ckuguin7m3ja417nuf7stwlqg.html?title=false&access_token=pk.eyJ1Ijoic2lzb3ZhYzQxNyIsImEiOiJja3VndHlrYWUwendsMnFudmdjOXZ3bXdmIn0.bJDcHAncLebTVqNaecJxuQ&zoomwheel=false#16/48.860878/2.334792"
+					title="Basic"
+					style="border:none"
+				)
