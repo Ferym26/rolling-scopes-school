@@ -1,0 +1,153 @@
+.video-player
+
+	&__media
+		position: relative
+		width: 100%
+		aspect-ratio: calc(1440 / 650) / 1
+		// height: 650px
+
+		video
+			display: block
+			+sizeblock(100%)
+			object-fit: cover
+
+	&__nav
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 85px
+		padding: 0 25px
+		background-color: #000
+		color: #fff
+
+		+media($llg)
+			height: 60px
+			padding: 0 36px
+
+		+media($lg)
+			height: 53px
+			padding: 0 25px
+
+	&__play
+		margin-right: 40px
+
+		+media($lg)
+			margin-right: 30px
+
+	&__progress-time
+		flex: 1 0 auto
+		max-width: 100%
+		margin-right: 53px
+
+		+media($llg)
+			margin-right: 35px
+
+		+media($lg)
+			position: absolute
+			top: -6px
+			left: 0
+			width: 100%
+
+	&__volume-btn
+		margin-right: 50px
+
+		+media($llg)
+			margin-right: 15px
+
+		+media($lg)
+			margin-right: 30px
+
+	&__progress-volume
+		flex: 0 0 155px
+		max-width: 155px
+		margin-right: 55px
+
+		+media($llg)
+			margin-right: 35px
+
+		+media($lg)
+			flex: 1 0 auto
+			max-width: 100%
+			margin-right: 30px
+
+	&__fullpage
+
+	.vp-btn
+		position: absolute
+		display: block
+		+sizeblock(220px)
+		+center
+		padding: 0
+		border: none
+		background-color: $trp
+		cursor: pointer
+		transition: opacity 0.4s ease
+
+		+media($llg)
+			+sizeblock(152px)
+
+		+media($lg)
+			+sizeblock(80px)
+
+		+media($md)
+			+sizeblock(50px)
+
+		.icon
+			display: block
+			+sizeblock(100%)
+			fill: #fff
+
+		&.hide
+			opacity: 0
+			pointer-events: none
+
+	.vp-nav-btn
+		display: block
+		+sizeblock(35px)
+		padding: 0
+		border: none
+		background-color: $trp
+		cursor: pointer
+
+		+media($llg)
+			+sizeblock(28px)
+
+		+media($md)
+			+sizeblock(20px)
+
+		.icon
+			display: block
+			max-width: 100%
+			max-height: 100%
+			fill: #b3b3b3
+
+		.icon-off
+			display: none
+
+		&.is-off
+
+			.icon-on
+				display: none
+
+			.icon-off
+				display: block
+
+	.vp-progress
+		display: block
+		width: 100%
+		height: 5px
+		background: linear-gradient(to right, $red-dark 0%, $red-dark 40%, #fff 40%, #fff 100%)
+		border: none
+		border-radius: 0
+		outline: none
+		transition: background 450ms ease-in
+		appearance: none
+
+
+		&::-webkit-slider-thumb
+			+sizeblock(15px)
+			border-radius: 50%
+			appearance: none
+			cursor: ew-resize
+			background: #fff

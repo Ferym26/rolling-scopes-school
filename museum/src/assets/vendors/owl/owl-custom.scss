@@ -1,0 +1,30 @@
+@import "/node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
+@import "/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css";
+
+.owl-carousel {
+
+	.owl-nav {
+
+		button {
+			display: block;
+			width: 30px;
+		}
+	}
+}
+
+.owl-theme {
+
+	.owl-nav {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		gap: 50px;
+		@include wcenter;
+		margin-top: 0;
+	}
+
+	.owl-dots {
+		margin-top: 20px;
+	}
+}

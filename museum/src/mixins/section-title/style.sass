@@ -1,0 +1,58 @@
+.section-title
+	$this: &
+	position: relative
+	display: flex
+	margin-bottom: 75px
+
+	+media($llg)
+		margin-bottom: 60px
+
+	+media($lg)
+		margin-bottom: 40px
+
+	&__text
+		flex: 1 0 auto
+		font-size: 80px
+		text-transform: uppercase
+		line-height: 1
+		letter-spacing: 5px
+		color: $c-main
+		font-weight: 400
+
+		+media($llg)
+			font-size: 50px
+
+		+media($lg)
+			font-size: 40px
+
+		+media($md)
+			font-size: 28px
+
+	&__descr
+		flex: 0 0 50%
+		max-width: 50%
+		font-weight: 300
+		font-size: 22px
+		font-family: $font-main
+		line-height: 1.6
+
+		+media($llg)
+			display: none
+
+	&.is-border
+		padding-bottom: 34px
+		border-bottom: 3px solid $red-dark
+
+		+media($llg)
+			padding-bottom: 29px
+
+		+media($lg)
+			padding-bottom: 30px
+
+		+media($md)
+			padding-bottom: 22px
+
+	.bg-black &
+
+		#{$this}__text
+			color: #fff

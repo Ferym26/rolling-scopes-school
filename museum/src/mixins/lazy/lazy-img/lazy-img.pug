@@ -1,0 +1,30 @@
+//- +lazy-img({
+//- 	pic: 'default-image.jpg',
+//- 	picX2: true,
+//- })
+
+mixin lazy-img(data)
+
+	- var name = data.pic.split('.')[0]
+	- var ext = data.pic.split('.')[1]
+
+	img.lazy-img(
+		class= data.mode
+		src= pixel
+		data-src= `images/${data.pic}`
+		data-srcset=data.picX2 ? `images/${name}@2.${ext} 2x` : false
+		alt='image'
+	)
+
+mixin lazy-slider-img(data)
+
+	- var name = data.pic.split('.')[0]
+	- var ext = data.pic.split('.')[1]
+
+	img.lazy-slider-img(
+		class= data.mode
+		src= pixel
+		data-src= `images/${data.pic}`
+		data-srcset=data.picX2 ? `images/${name}@2.${ext} 2x` : false
+		alt='image'
+	)

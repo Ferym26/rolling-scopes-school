@@ -1,0 +1,5 @@
+mixin section-title(data)
+	+b.section-title(class=data.mode ? data.mode : false)
+		+e('h2').__text!= data.text
+		if data.descr
+			+e('h4').__descr!= data.descr

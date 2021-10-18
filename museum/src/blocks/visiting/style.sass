@@ -1,0 +1,36 @@
+.visiting
+
+	&__list
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: auto
+		grid-gap: 72px 60px
+
+		+media($llg)
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: auto
+			grid-gap: 57px 108px
+			max-width: calc(100% - (108px * 2))
+			width: 100%
+			margin: 0 auto
+
+		+media($lg)
+			max-width: calc(100% - (56px * 2))
+			grid-gap: 37px 56px
+
+		+media($md)
+			grid-template-columns: 1fr
+			grid-template-rows: auto
+			max-width: calc(100% - (50px * 2))
+			grid-gap: 39px 50px
+
+		+media(420px)
+			max-width: 100%
+
+	&.section
+
+		+media($lg)
+			padding-bottom: 78px
+
+		+media($md)
+			padding-bottom: 37px

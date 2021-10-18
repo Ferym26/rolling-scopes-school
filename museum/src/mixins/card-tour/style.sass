@@ -1,0 +1,104 @@
+.card-tour
+	$this: &
+	position: relative
+	width: 100%
+	z-index: 10
+
+	&:hover
+
+		.card-img
+			transform: scale(1.05)
+
+		#{$this}__descr
+
+			&:before
+				transform: scale(1, 1)
+
+	&__pic
+		overflow: hidden
+
+		.card-img
+			transition: transform 0.3s ease-in-out
+
+	&__content
+		margin-top: 25px
+
+		+media($lg)
+			margin-top: 20px
+
+	&__title
+
+		.title-link
+			color: #000
+			font-size: 32px
+			line-height: 1
+			letter-spacing: 5px
+			text-transform: uppercase
+			font-weight: 400
+			text-decoration: none
+
+			+media($llg)
+				font-size: 28px
+				letter-spacing: 3px
+
+			+media($lg)
+				font-size: 22px
+
+			+media($md)
+				font-size: 18px
+				letter-spacing: 5px
+
+			&::before
+				+pseudo
+				+sizeblock(100%)
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				z-index: 20
+
+	&__descr
+		position: relative
+		margin-top: 9px
+		padding-top: 11px
+
+		+media($lg)
+			margin-top: 5px
+
+		+media($md)
+			margin-top: 7px
+
+		&::before
+			+pseudo
+			+sizeblock(100%, 2px)
+			top: 0
+			left: 0
+			background-color: $red-dark
+			transform: scale(0.68, 1)
+			transform-origin: 0 50%
+			transition: transform 0.3s ease-in-out
+			will-chage: transform
+
+			+media($llg)
+				transform: scale(0.45, 1)
+
+			+media($lg)
+				transform: scale(0.55, 1)
+
+		.text
+			font-weight: 200
+
+			&--fz1
+				margin-bottom: 6px
+
+				+media($lg)
+					font-size: 18px
+
+				+media($md)
+					font-size: 16px
+
+			&--fz2
+				font-size: 18px
+
+				+media($lg)
+					font-size: 16px

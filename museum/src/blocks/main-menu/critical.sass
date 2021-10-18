@@ -1,0 +1,145 @@
+.main-menu
+	$this: &
+
+	&__list
+		display: flex
+
+	&__link
+		display: inline-block
+
+		&:not(:last-child)
+			margin-right: 56px
+
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+		+sizeblock(32px)
+		padding: 0
+		background-color: $trp
+		border: none
+
+		+mediaMin($llg)
+			display: none
+
+		.icon
+			display: block
+			+sizeblock(100%)
+			fill: #fff
+
+		.icon-open
+
+		.icon-close
+			display: none
+
+	&__mob-scroll
+		overflow-y: auto
+
+	&__gallery
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: auto
+		grid-gap: 20px
+		margin-top: 35px
+		padding-bottom: 35px
+		border-bottom: 1px solid #818181
+
+		+mediaMin($lg)
+			display: none
+
+		+media($md)
+			grid-template-columns: repeat(3, 1fr)
+			grid-template-rows: auto
+			grid-gap: 13px
+
+		.mm-pic
+
+			+media($md)
+				width: 100%
+				height: 100%
+				object-fit: cover
+				aspect-ratio: 1 / 1
+
+		.mm-pic--big
+			grid-column: 1 / span 2
+			grid-row: 1 / span 1
+
+			+media($md)
+				grid-column: 1 / span 1
+
+	&__social
+		display: flex
+		justify-content: center
+		margin-top: 34px
+
+		+mediaMin($lg)
+			display: none
+
+	.header &
+
+		&__mob-wrap
+
+			+media($llg)
+				position: absolute
+				width: 300px
+				height: 585px
+				top: 131px
+				left: 0
+				padding: 30px 55px
+				transform: translate(-101%, 0)
+				will-change: transform
+				transition: transform 0.5s ease-in-out
+				background-color: #000
+				overflow-y: auto
+				z-index: 100
+
+			+media($lg)
+				top: 110px
+				width: 100vw
+				height: calc(100vh - 110px)
+
+			+media($md)
+				top: 90px
+				height: calc(100vh - 90px)
+
+			+media(420px)
+				padding: 30px 20px
+
+		&__list
+
+			+media($llg)
+				flex-direction: column
+				align-items: flex-start
+
+		&__link
+			position: relative
+
+			+media($llg)
+				min-width: 120px
+
+				&:after
+					+pseudo
+					top: 9px
+					right: 0
+					+sizeblock(8px, 12px)
+					background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.33352 5.53176L1.99337 0.191706C1.86985 0.068097 1.70498 0 1.52917 0C1.35337 0 1.18849 0.068097 1.06498 0.191706L0.671718 0.584873C0.415818 0.841066 0.415818 1.25745 0.671718 1.51326L5.15597 5.99751L0.666742 10.4867C0.543231 10.6104 0.475037 10.7751 0.475037 10.9508C0.475037 11.1267 0.543231 11.2915 0.666742 11.4152L1.06001 11.8083C1.18362 11.9319 1.3484 12 1.5242 12C1.7 12 1.86488 11.9319 1.98839 11.8083L7.33352 6.46336C7.45732 6.33936 7.52532 6.1738 7.52493 5.99781C7.52532 5.82112 7.45732 5.65566 7.33352 5.53176Z' fill='white'/%3E%3C/svg%3E%0A")
+					background-repeat: no-repeat
+					background-position: 50% 50%
+					background-size: cover
+
+			&:not(:last-child)
+
+				+media($llg)
+					margin-right: 0
+					margin-bottom: 20px
+
+		&.is-open
+
+			.main-menu__mob-wrap
+				transform: translate(0%, 0)
+
+			.icon-open
+				display: none
+
+			.icon-close
+				display: block

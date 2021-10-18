@@ -1,0 +1,159 @@
+.tickets
+	$this: &
+
+	&__inner
+		display: flex
+
+		+media($md)
+			flex-direction: column
+
+	&__pic
+		flex: 0 0 50%
+		max-width: 50%
+
+		+media($llg)
+			flex: 0 0 700px
+			max-width: 700px
+			height: 440px
+
+		+media($lg)
+			flex: 0 0 444px
+			max-width: 444px
+			height: 340px
+
+		+media($md)
+			flex: 0 0 100%
+			max-width: 100%
+			height: auto
+
+		img
+			+sizeblock(100%)
+			object-fit: cover
+
+			+media($md)
+				aspect-ratio: 2.375 / 1
+
+	&__calc
+		display: flex
+		justify-content: space-between
+		flex: 0 0 50%
+		max-width: 50%
+		padding-left: 60px
+
+		+media($llg)
+			flex: 1 0 auto
+			max-width: 100%
+			padding-left: 80px
+
+		+media($lg)
+			padding-left: 60px
+
+		+media($md)
+			justify-content: center
+			margin-top: 39px
+			padding-left: 0
+
+	&__box
+
+		&-title
+			margin-bottom: 40px
+			font-size: 28px
+			font-weight: 700
+
+			+media($md)
+				width: 100%
+				font-size: 16px
+
+		&-content
+
+		&--ticket
+
+			+media($llg)
+				display: none
+
+		&--amount
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+
+			+media($llg)
+				align-items: flex-start
+
+			#{$this}__box
+
+				&-title
+					margin-bottom: 20px
+					text-align: right
+
+					+media($llg)
+						margin-bottom: 23px
+						text-align: left
+
+					+media($lg)
+						margin-bottom: 32px
+
+					+media($md)
+						margin-bottom: 20px
+						text-align: center
+
+	&__result
+
+		+media($md)
+			width: 100%
+
+		&-text
+			font-size: 28px
+			font-weight: 700
+			letter-spacing: 1.65px
+
+			+media($md)
+				width: 100%
+				font-size: 18px
+				text-align: center
+				letter-spacing: 0
+
+	&__action
+		margin-top: 57px
+
+		+media($llg)
+			margin-top: 66px
+
+		+media($lg)
+			margin-top: 36px
+
+		+media($md)
+			display: flex
+			justify-content: center
+			width: 100%
+
+	.conte-list
+		margin-bottom: 47px
+
+		+media($llg)
+			margin-bottom: 22px
+
+		+media($lg)
+			margin-bottom: 36px
+
+	.conte-elem
+		width: 150px
+
+		+media($llg)
+			width: 175px
+
+		&:not(:last-child)
+			margin-bottom: 11px
+
+			+media($llg)
+				margin-bottom: 28px
+
+			+media($lg)
+				margin-bottom: 23px
+
+		&__title
+			margin-bottom: 9px
+
+	&.section
+
+		+media($lg)
+			padding-bottom: 40px

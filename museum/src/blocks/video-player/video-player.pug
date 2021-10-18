@@ -1,0 +1,26 @@
+mixin video-player(data)
+
+	+b.video-player
+		+e.__media
+			//- img(src=`images/${data.poster}` alt="slide 1")
+			video.js_video(muted poster='images/poster0.jpg' preload="metadata")
+				source(src='video/video0.mp4' type="video/mp4")
+			button.vp-btn.js_play-big(aria-label='Play Button')
+				+icon('play-big')
+		+e.__nav
+			+e.__play
+				button.vp-nav-btn.js_btn-play(aria-label='Play Button')
+					+icon('play', 'icon-on')
+					+icon('pause', 'icon-off')
+			+e.__progress-time
+				input.vp-progress(type="range" value="40" min="0" max="100" step="1")
+			+e.__volume-btn
+				button.vp-nav-btn.js_btn-volume-toggler(aria-label='Volume Button')
+					+icon('volume-on', 'icon-on')
+					+icon('volume-off', 'icon-off')
+			+e.__progress-volume
+				input.vp-progress(type="range" value="40" min="0" max="100" step="1")
+			+e.__fullpage
+				button.vp-nav-btn.js_btn-fullpage(aria-label='Fullpage Button')
+					+icon('full-on', 'icon-on')
+					+icon('full-off', 'icon-off')

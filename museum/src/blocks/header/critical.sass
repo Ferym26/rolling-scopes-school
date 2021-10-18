@@ -1,0 +1,24 @@
+.header
+	padding: 59px 0
+
+	+media($xl)
+		padding: 49px 0
+
+	+media($lg)
+		padding: 43px 0 34px
+
+	+media($md)
+		padding: 29px 0 29px
+
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	.logo
+
+		.logo-img
+			+sizeblock(199px, 33px)
+
+			+media($md)
+				+sizeblock(135px, 20px)

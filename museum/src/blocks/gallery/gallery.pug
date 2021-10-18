@@ -1,0 +1,31 @@
+-
+	var imageList = [
+		'galery1.jpg',
+		'galery2.jpg',
+		'galery3.jpg',
+		'galery4.jpg',
+		'galery5.jpg',
+		'galery6.jpg',
+		'galery7.jpg',
+		'galery8.jpg',
+		'galery9.jpg',
+		'galery10.jpg',
+		'galery11.jpg',
+		'galery12.jpg',
+		'galery13.jpg',
+		'galery14.jpg',
+		'galery15.jpg',
+	]
+
++b('section').gallery.section.bg-black#gallery
+	.container
+		+section-title({
+			text: 'Art Gallery',
+		})
+		+e.__body
+			+e.__inner
+				//- each item in imageList
+					+lazy-webp({
+						pic: item,
+						mod: 'gallery-img'
+					})

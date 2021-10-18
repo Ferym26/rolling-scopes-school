@@ -1,0 +1,24 @@
+extends ../layout/layout-tour
+
+
+block vars
+	- var pageTitle = 'Louvre'
+	- var pageDescr = 'Louvre'
+	- var bodyClass = ''
+	- var componentsList = []
+
+
+block main
+	include ../components/tour-frame/tour-frame-4
+
+
+block componentsStyles
+	include ../components/a-styles/a-styles
+	+style-includer()
+
+
+//- block libs
+
+
+//- block scripts
+//- 	script(src="./js/index.js" defer)

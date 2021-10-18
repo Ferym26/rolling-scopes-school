@@ -1,0 +1,96 @@
++b.booking
+
+	+e.__overlay
+
+	+e.__inner
+		+e.__content
+			button.b-close(aria-label='Close')
+				+icon('close')
+			+e.__meta
+				+e.__head
+					+e.__head-title Booking tickets
+						+lazy-img({pic: 'booking-logo.svg', mode: 'b-logo'})
+					+e.__head-descr Tour to Louvre
+				+e.__form
+					.form-row.col2
+						.b-input
+							input.b-input__field(type="date")
+							+icon('date', 'icon-type')
+							+icon('select-arrow', 'icon-arrow')
+						.b-input
+							input.b-input__field(type="time")
+							+icon('time', 'icon-type')
+							+icon('select-arrow', 'icon-arrow')
+					.form-row
+						.b-input
+							input.b-input__field(type="text" placeholder='Name')
+							+icon('person', 'icon-type')
+					.form-row
+						.b-input
+							input.b-input__field(type="email" placeholder='E-mail')
+							+icon('email', 'icon-type')
+					.form-row
+						.b-input
+							input.b-input__field(type="tel" placeholder='Phone')
+							+icon('tel', 'icon-type')
+					.form-row
+						.b-select
+							select.b-select__field(name="date")
+								option(value="q") 1
+								option(value="q") 1
+								option(value="q") 1
+							+icon('date', 'icon-type')
+							+icon('select-arrow', 'icon-arrow')
+				+e.__counter
+					+e.__counter-title Entry ticket
+					+e.__counter-list
+						+e.__counter-row
+							+e.__counter-text Basic 18+ (20 €)
+							+pc-counter({mod: '--theme2'})
+						+e.__counter-row
+							+e.__counter-text Senior 65+ (10 €)
+							+pc-counter({mod: '--theme2'})
+
+			+e.__overview
+				+e.__info
+					+e.__info-title Overview
+					+e.__info-subtitle Tour to Louvre
+					+e.__info-preview
+						+lazy-img({pic: 'b-preview.jpg'})
+					+e.__info-list
+						+e.__info-item
+							+e.__info-item-icon
+								+icon('date')
+							+e.__info-item-text Friday, August 19
+						+e.__info-item
+							+e.__info-item-icon
+								+icon('time')
+							+e.__info-item-text 16 : 30
+						+e.__info-item
+							+e.__info-item-icon
+								+icon('check')
+							+e.__info-item-text Temporary exhibition
+				+e.__total
+					+e.__total-list
+						+e.__total-row
+							+e.__total-type
+								+e.__total-label 2
+								+e.__total-type-title Basic (20 €)
+							+e.__total-price 40 €
+						+e.__total-row
+							+e.__total-type
+								+e.__total-label 2
+								+e.__total-type-title Senior (10 €)
+							+e.__total-price 20 €
+					+e.__total-footer
+						+e.__total-title Total:
+						+e.__total-summ 60 €
+
+				+e.__cardholder
+					+b.b-card.--front
+						+lazy-img({pic: 'card-front.svg'})
+					+b.b-card.--back
+						+lazy-img({pic: 'card-back.svg'})
+
+				+e.__action
+					button.btn-main Book

@@ -1,0 +1,33 @@
+-
+	var socialList = [
+		{
+			name: 'youtube',
+			link: 'https://www.youtube.com/user/louvre',
+			icon: 'social-youtube',
+		},
+		{
+			name: 'instagram',
+			link: 'https://www.instagram.com/museelouvre/',
+			icon: 'social-insta',
+		},
+		{
+			name: 'facebook',
+			link: 'https://www.facebook.com/museedulouvre',
+			icon: 'social-fb',
+		},
+		{
+			name: 'twitter',
+			link: 'http://twitter.com/museelouvre',
+			icon: 'social-tw',
+		},
+		{
+			name: 'pinterest',
+			link: 'https://www.pinterest.fr/museedulouvre/',
+			icon: 'social-pint',
+		},
+	]
+
++b('nav').social
+	each item in socialList
+		+e('a').__item(href=item.link aria-label=`link to ${item.name}` target='_blank')
+			+icon(item.icon)

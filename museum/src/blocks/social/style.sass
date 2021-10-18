@@ -1,0 +1,29 @@
+.social
+	display: flex
+	align-items: center
+
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		+sizeblock(48px)
+		+circle
+		border: 1px solid #666
+		transition: border-color 0.3s ease
+
+		&:not(:last-child)
+			margin-right: 25px
+
+			+media($md)
+				margin-right: 5px
+
+		&:hover
+			border-color: $c-main
+
+			.icon
+				fill: $c-main
+
+		.icon
+			+sizeblock(24px)
+			fill: #fff
+			transition: fill 0.3s ease

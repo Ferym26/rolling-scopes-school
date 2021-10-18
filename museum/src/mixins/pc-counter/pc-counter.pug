@@ -1,0 +1,20 @@
+mixin pc-counter(arsg)
+
+	- var id = Math.floor(Math.random() * 9999999999)
+
+	+b.pc-counter(
+		class= arsg.mod ? arsg.mod : false
+	)
+		input.pc-counter-input.js_pc-counter-input(
+			v-model=arsg.vmodel
+			type='number'
+			value= arsg.value || '1'
+			min= arsg.min || 1
+			max= arsg.max || 20
+			data-suffix= arsg.unit || ''
+			name= 'NAME' + id
+			aria-label='Enter quantity'
+			readonly
+		)
+		button.pc-counter-btn.pc-counter-minus.js_pc-counter-minus(type='button') -
+		button.pc-counter-btn.pc-counter-plus.js_pc-counter-plus(type='button') +

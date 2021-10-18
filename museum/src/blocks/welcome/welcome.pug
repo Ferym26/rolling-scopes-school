@@ -1,0 +1,36 @@
++b('section').welcome.bg-black#welcome
+	.container
+		+e.__inner
+			+e.__content
+				+e('h1').__title Welcome #[br] to the Louvre
+				+e.__descr From the castle to the museum
+				+e.__action
+					a.btn-main(href='tour-welcome.html' target='_blank') Discover the Louvre
+			+b.slider-welcome
+				+e.__wrap.js_slider-welcome
+					+e.__slide
+						picture
+							source(media=`(max-width: 449px)` srcset=`images/ws-1-mob.jpg`)
+							source(media=`(min-width: 450px)` srcset=`images/ws-1.jpg`)
+							img(src='images/ws-1.jpg' alt='pic')
+					+e.__slide
+						img.tns-lazy-img(data-src="images/ws-2.jpg" src=pixel alt="slide 2")
+					+e.__slide
+						img.tns-lazy-img(data-src="images/ws-3.jpg" src=pixel alt="slide 3")
+					+e.__slide
+						img.tns-lazy-img(data-src="images/ws-4.jpg" src=pixel alt="slide 4")
+					+e.__slide
+						img.tns-lazy-img(data-src="images/ws-5.jpg" src=pixel alt="slide 5")
+				+e.__nav
+					+e.__nav-counter #[span.js_slide-index 01] #[span.devider |] #[span.js_slide-all 05]
+					+e.__nav-dots
+						button.dot(aria-label='dot')
+						button.dot(aria-label='dot')
+						button.dot(aria-label='dot')
+						button.dot(aria-label='dot')
+						button.dot(aria-label='dot')
+					+e.__nav-controls
+						+e('button').__btn.--prev(aria-label='Prev')
+							+icon('slider-welcome-arrow')
+						+e('button').__btn.--next(aria-label='Next')
+							+icon('slider-welcome-arrow')

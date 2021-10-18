@@ -1,0 +1,14 @@
+mixin card-tour(data)
+
+	+b.card-tour
+		+e.__pic
+			+lazy-webp({
+				pic: data.pic,
+				mod: 'card-img',
+			})
+		+e.__content
+			+e('h3').__title
+				a.title-link(href= data.link target='_blank')= data.title
+			+e.__descr
+				p.text.text--fz1= data.descr[0]
+				p.text.text--fz2= data.descr[1]

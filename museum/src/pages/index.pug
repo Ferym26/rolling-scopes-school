@@ -1,0 +1,38 @@
+extends ../layout/layout
+
+
+block vars
+	- var pageTitle = 'Louvre'
+	- var pageDescr = 'Louvre'
+	- var bodyClass = ''
+	- var componentsList = []
+
+
+block main
+	include ../blocks/welcome/welcome
+	include ../blocks/visiting/visiting
+	include ../blocks/explore/explore
+	include ../blocks/video/video
+	include ../blocks/gallery/gallery
+	include ../blocks/tickets/tickets
+	include ../blocks/banner/banner
+	include ../blocks/contacts/contacts
+	include ../blocks/booking/booking
+
+
+block popups
+
+
+block componentsStyles
+	include ../components/a-styles/a-styles
+	+style-includer()
+
+
+block libs
+	script(src="./js/vendors/tiny-slider.js" defer)
+	script(src="./js/vendors/owl.carousel.min.js" defer)
+	script(src="./js/vendors/gsap.min.js" defer)
+
+
+block scripts
+	script(src="./js/index.js" defer)

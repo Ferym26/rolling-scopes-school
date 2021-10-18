@@ -1,0 +1,33 @@
+//- миксин подключает стили компонентов на страницу
+
+//- подключение общих критических стилей
+mixin style-includer()
+
+	//- link(rel='preload' href='css/allComponents.css' as='style' onload="this.onload=null;this.rel='stylesheet'")
+	each item in componentsList
+		link(rel="stylesheet" href='./css/' + item + 'style.css')
+
+
+//- подключение скриптов отдельных компонентов
+mixin componentsScripts-includer()
+
+	each item in componentsScriptsList
+		script(src=`./js/components/${item}/script.js` defer)
+
+
+mixin include-style(name)
+	-
+		var componentName = name + '/';
+
+		isInComponentsList(componentsList, componentName);
+
+
+mixin include-script(name)
+	-
+		var componentName = name;
+
+		isInComponentsList(componentsScriptsList, componentName);
+
+
+
+//- 	<!--[if components]> text <![endif]-->
